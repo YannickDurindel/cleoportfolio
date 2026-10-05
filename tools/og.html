@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<!-- 1200x630 Open Graph card. Rendered to assets/img/og.jpg by tools/build-assets.mjs -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400&display=block">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body { background: #0e1a2b; color: #f4efe6; font-family: Inter, sans-serif; position: relative; }
+  .grain { position: absolute; inset: 0; opacity: .5; mix-blend-mode: screen; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .map { position: absolute; right: -30px; top: 40px; width: 820px; opacity: 1; }
+  .map .dots { stroke: rgba(244,239,230,.22); stroke-width: 3.4; stroke-linecap: round; fill: none; }
+  .map .arc { fill: none; stroke: #d4b47c; stroke-width: 1.5; }
+  .map .city { fill: #f4efe6; } .map .origin { fill: #d9473c; }
+  .txt { position: absolute; left: 72px; top: 64px; bottom: 60px; display: flex; flex-direction: column; }
+  .mono { font: 500 15px 'IBM Plex Mono', monospace; letter-spacing: .14em; text-transform: uppercase; color: #d4b47c; }
+  h1 { font: 300 140px/.86 Fraunces, serif; letter-spacing: -.045em; margin: auto 0 26px; font-variation-settings: "opsz" 144; }
+  h1 i { display: block; padding-left: 70px; }
+  h1 b { color: #d9473c; font-weight: 300; font-style: normal; }
+  .sub { font: 300 italic 34px Fraunces, serif; color: #f4efe6; opacity: .9; }
+  .rule { position: absolute; left: 0; right: 0; top: 0; height: 6px; background: linear-gradient(90deg, #0e1a2b 0 33%, #f4efe6 33% 34%, #d9473c 34% 35%, #b08d57 35%); }
+  .foot { position: absolute; left: 72px; right: 72px; bottom: 34px; display: flex; justify-content: space-between; border-top: 1px solid rgba(244,239,230,.2); padding-top: 14px; font-size: 13px; }
+  .txt .mono { margin-bottom: 0; }
+</style></head>
+<body>
+<div class="rule"></div>
+<svg class="map" viewBox="0 30 1000 450" id="map"></svg>
+<div class="grain"></div>
+<div class="txt">
+  <p class="mono" style="margin:0">Dépêche N°2026-01 · Portfolio</p>
+  <h1>Cléo<i>Beaufils<b>.</b></i></h1>
+  <p class="sub" style="margin:0 0 70px">Diplomatie &amp; Asie du Sud-Est</p>
+</div>
+<div class="foot mono"><span>Paris → Hanoï · Bangkok · Jakarta · Singapour · Manille</span><span>48°51′N 2°21′E</span></div>
+<script type="module">
+  import { MAP_DOTS } from '../assets/js/map-dots.js';
+  const K = 1000 / 144, P = (lon, lat) => [(lon + 12) * K, (58 - lat) * K];
+  const C = [[105.83, 21.03], [100.5, 13.76], [106.85, -6.21], [103.82, 1.35], [104.93, 11.56], [101.69, 3.14], [120.98, 14.6]];
+  const o = P(2.35, 48.86);
+  let s = `<path class="dots" d="${MAP_DOTS}"/>`;
+  C.forEach(([lon, lat], i) => {
+    const [x, y] = P(lon, lat), mx = (o[0] + x) / 2, my = (o[1] + y) / 2, dx = x - o[0], dy = y - o[1], l = Math.hypot(dx, dy);
+    let nx = -dy / l, ny = dx / l; if (ny > 0) { nx = -nx; ny = -ny; }
+    const b = .14 + (i % 3) * .035;
+    s += `<path class="arc" d="M${o[0]} ${o[1]}Q${mx + nx * l * b} ${my + ny * l * b} ${x} ${y}"/><circle class="city" cx="${x}" cy="${y}" r="4"/>`;
+  });
+  s += `<circle class="origin" cx="${o[0]}" cy="${o[1]}" r="5"/>`;
+  document.getElementById('map').innerHTML = s;
+  document.fonts.ready.then(() => document.body.dataset.ready = '1');
+</script>
+</body></html>

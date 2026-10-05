@@ -1,0 +1,738 @@
+{
+  "_readme": "Tout le texte du site vit ici. Chaque champ traduisible est un objet {\"fr\": \"…\", \"en\": \"…\"}. Les champs marqués [PLACEHOLDER] sont à remplacer. Voir README.md.",
+  "meta": {
+    "name": "Cléo Beaufils",
+    "firstName": "Cléo",
+    "lastName": "Beaufils",
+    "title": {
+      "fr": "Cléo Beaufils · Diplomatie & Asie du Sud-Est",
+      "en": "Cléo Beaufils · Diplomacy & Southeast Asia"
+    },
+    "description": {
+      "fr": "Portfolio de Cléo Beaufils : relations internationales, diplomatie française et Asie du Sud-Est. [PLACEHOLDER]",
+      "en": "Portfolio of Cléo Beaufils: international relations, French diplomacy and Southeast Asia. [PLACEHOLDER]"
+    },
+    "edition": {
+      "fr": "Édition Asie du Sud-Est",
+      "en": "Southeast Asia Edition"
+    },
+    "volume": {
+      "fr": "Vol. I · N°01",
+      "en": "Vol. I · No. 01"
+    }
+  },
+  "ui": {
+    "skip": {
+      "fr": "Aller au contenu",
+      "en": "Skip to content"
+    },
+    "langSwitch": {
+      "fr": "Read in English",
+      "en": "Lire en français"
+    },
+    "nav": {
+      "profil": {
+        "fr": "Profil",
+        "en": "Profile"
+      },
+      "parcours": {
+        "fr": "Parcours",
+        "en": "Background"
+      },
+      "dossiers": {
+        "fr": "Dossiers",
+        "en": "Files"
+      },
+      "terrain": {
+        "fr": "Terrain",
+        "en": "Field"
+      },
+      "langues": {
+        "fr": "Langues",
+        "en": "Languages"
+      },
+      "contact": {
+        "fr": "Contact",
+        "en": "Contact"
+      }
+    },
+    "dossierLabel": {
+      "fr": "Dossier N°",
+      "en": "File No. "
+    },
+    "ref": {
+      "fr": "Réf.",
+      "en": "Ref."
+    },
+    "clocksLabel": {
+      "fr": "Heure locale dans les postes",
+      "en": "Local time at post"
+    },
+    "read": {
+      "fr": "Lire le dossier",
+      "en": "Read the file"
+    },
+    "experience": {
+      "fr": "Expériences",
+      "en": "Experience"
+    },
+    "education": {
+      "fr": "Formation",
+      "en": "Education"
+    },
+    "native": {
+      "fr": "Langue maternelle",
+      "en": "Native"
+    },
+    "cefr": {
+      "fr": "Échelle CECRL",
+      "en": "CEFR scale"
+    },
+    "reveal": {
+      "fr": "Afficher l'adresse",
+      "en": "Show address"
+    },
+    "copy": {
+      "fr": "Copier",
+      "en": "Copy"
+    },
+    "copied": {
+      "fr": "Copié",
+      "en": "Copied"
+    },
+    "footer": {
+      "fr": "Site personnel, sans lien avec une administration. Aucun traceur, aucun cookie.",
+      "en": "Personal website, not affiliated with any government body. No trackers, no cookies."
+    },
+    "top": {
+      "fr": "Haut de page",
+      "en": "Back to top"
+    },
+    "endOfTelegram": {
+      "fr": "FIN DE TÉLÉGRAMME",
+      "en": "END OF TELEGRAM"
+    },
+    "menu": {
+      "fr": "Ouvrir le menu",
+      "en": "Open menu"
+    },
+    "close": {
+      "fr": "Fermer le menu",
+      "en": "Close menu"
+    },
+    "helloBtn": {
+      "fr": "Bonjour en sept langues : afficher la suivante",
+      "en": "Hello in seven languages: show the next one"
+    },
+    "fieldMap": {
+      "fr": "Carte des séjours en Asie du Sud-Est",
+      "en": "Map of stays in Southeast Asia"
+    },
+    "heroMap": {
+      "fr": "Carte reliant Paris à sept capitales d'Asie du Sud-Est",
+      "en": "Map linking Paris to seven Southeast Asian capitals"
+    },
+    "released": {
+      "fr": "Diffusion libre",
+      "en": "Public release"
+    },
+    "readCursor": {
+      "fr": "Lire",
+      "en": "Read"
+    },
+    "stampTop": {
+      "fr": "Paris → Asie du Sud-Est",
+      "en": "Paris → Southeast Asia"
+    },
+    "stampBottom": {
+      "fr": "Dépêche N°01",
+      "en": "Dispatch No. 01"
+    },
+    "entry": {
+      "fr": "Entrée",
+      "en": "Entry"
+    },
+    "photoPlaceholder": {
+      "fr": "Photo à venir",
+      "en": "Photo to come"
+    }
+  },
+  "hero": {
+    "kicker": {
+      "fr": "Dépêche n°2026-01 · Paris → Asie du Sud-Est",
+      "en": "Dispatch no. 2026-01 · Paris → Southeast Asia"
+    },
+    "greetingSuffix": {
+      "fr": "je suis",
+      "en": "I am"
+    },
+    "tagline": {
+      "fr": "Étudiante en relations internationales. Je me prépare à servir la diplomatie française en Asie du Sud-Est : coopération, culture, et l'art patient de se comprendre. [PLACEHOLDER]",
+      "en": "International relations student preparing to serve French diplomacy in Southeast Asia: cooperation, culture, and the patient art of mutual understanding. [PLACEHOLDER]"
+    },
+    "status": {
+      "fr": "Disponible pour un stage · printemps 2027 [PLACEHOLDER]",
+      "en": "Available for an internship · spring 2027 [PLACEHOLDER]"
+    },
+    "ctaCv": {
+      "fr": "Télécharger le CV",
+      "en": "Download CV"
+    },
+    "ctaContact": {
+      "fr": "Me contacter",
+      "en": "Get in touch"
+    },
+    "cv": {
+      "fr": "assets/cv/cleo-beaufils-cv-fr.pdf",
+      "en": "assets/cv/cleo-beaufils-cv-en.pdf"
+    },
+    "photo": "",
+    "photoAlt": {
+      "fr": "Portrait de Cléo Beaufils",
+      "en": "Portrait of Cléo Beaufils"
+    },
+    "photoCaption": {
+      "fr": "Portrait · [PLACEHOLDER]",
+      "en": "Portrait · [PLACEHOLDER]"
+    },
+    "mapCaption": {
+      "fr": "Fig. 1 · Paris et sept capitales de l'ASEAN. Distances orthodromiques.",
+      "en": "Fig. 1 · Paris and seven ASEAN capitals. Great-circle distances."
+    }
+  },
+  "greetings": [
+    {
+      "text": "Bonjour",
+      "lang": "fr",
+      "label": "Français"
+    },
+    {
+      "text": "Hello",
+      "lang": "en",
+      "label": "English"
+    },
+    {
+      "text": "Xin chào",
+      "lang": "vi",
+      "label": "Tiếng Việt"
+    },
+    {
+      "text": "สวัสดี",
+      "lang": "th",
+      "label": "ภาษาไทย"
+    },
+    {
+      "text": "Halo",
+      "lang": "id",
+      "label": "Bahasa Indonesia"
+    },
+    {
+      "text": "ជំរាបសួរ",
+      "lang": "km",
+      "label": "ភាសាខ្មែរ"
+    },
+    {
+      "text": "Apa khabar",
+      "lang": "ms",
+      "label": "Bahasa Melayu"
+    }
+  ],
+  "places": {
+    "paris": {
+      "name": {
+        "fr": "Paris",
+        "en": "Paris"
+      },
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "tz": "Europe/Paris"
+    },
+    "hanoi": {
+      "name": {
+        "fr": "Hanoï",
+        "en": "Hanoi"
+      },
+      "lat": 21.0278,
+      "lon": 105.8342,
+      "tz": "Asia/Ho_Chi_Minh"
+    },
+    "bangkok": {
+      "name": {
+        "fr": "Bangkok",
+        "en": "Bangkok"
+      },
+      "lat": 13.7563,
+      "lon": 100.5018,
+      "tz": "Asia/Bangkok"
+    },
+    "jakarta": {
+      "name": {
+        "fr": "Jakarta",
+        "en": "Jakarta"
+      },
+      "lat": -6.2088,
+      "lon": 106.8456,
+      "tz": "Asia/Jakarta"
+    },
+    "singapore": {
+      "name": {
+        "fr": "Singapour",
+        "en": "Singapore"
+      },
+      "lat": 1.3521,
+      "lon": 103.8198,
+      "tz": "Asia/Singapore"
+    },
+    "phnompenh": {
+      "name": {
+        "fr": "Phnom Penh",
+        "en": "Phnom Penh"
+      },
+      "lat": 11.5564,
+      "lon": 104.9282,
+      "tz": "Asia/Phnom_Penh"
+    },
+    "kualalumpur": {
+      "name": {
+        "fr": "Kuala Lumpur",
+        "en": "Kuala Lumpur"
+      },
+      "lat": 3.139,
+      "lon": 101.6869,
+      "tz": "Asia/Kuala_Lumpur"
+    },
+    "manila": {
+      "name": {
+        "fr": "Manille",
+        "en": "Manila"
+      },
+      "lat": 14.5995,
+      "lon": 120.9842,
+      "tz": "Asia/Manila"
+    }
+  },
+  "heroRoutes": [
+    "hanoi",
+    "bangkok",
+    "phnompenh",
+    "kualalumpur",
+    "singapore",
+    "jakarta",
+    "manila"
+  ],
+  "clocks": [
+    "paris",
+    "hanoi",
+    "bangkok",
+    "jakarta",
+    "singapore"
+  ],
+  "profil": {
+    "title": {
+      "fr": "Profil",
+      "en": "Profile"
+    },
+    "ref": "CB/PRF/01",
+    "lead": {
+      "fr": "La diplomatie, c'est d'abord une écoute. J'ai appris à la pratiquer entre deux langues, deux fuseaux horaires et des cultures qui ne se lisent pas de la même façon. [PLACEHOLDER]",
+      "en": "Diplomacy begins with listening. I learned to practise it between two languages, two time zones and cultures that are not read the same way. [PLACEHOLDER]"
+    },
+    "body": [
+      {
+        "fr": "Étudiante en master de relations internationales [PLACEHOLDER], je m'intéresse à la place de la France dans l'Indo-Pacifique : coopération universitaire, diplomatie culturelle, sécurité maritime en mer de Chine méridionale.",
+        "en": "A master's student in international relations [PLACEHOLDER], I focus on France's role in the Indo-Pacific: academic cooperation, cultural diplomacy and maritime security in the South China Sea."
+      },
+      {
+        "fr": "Un semestre à Hanoï m'a appris que l'influence se construit par la confiance, sur le temps long. Je souhaite mettre cette conviction au service d'une ambassade, d'un consulat ou d'un Institut français de la région. [PLACEHOLDER]",
+        "en": "A semester in Hanoi taught me that influence is built on trust, over time. I want to bring that conviction to an embassy, consulate or Institut français in the region. [PLACEHOLDER]"
+      }
+    ],
+    "pillars": [
+      {
+        "k": {
+          "fr": "Pourquoi la diplomatie",
+          "en": "Why diplomacy"
+        },
+        "v": {
+          "fr": "Servir l'intérêt général au point de contact entre deux sociétés. [PLACEHOLDER]",
+          "en": "Serving the public interest where two societies meet. [PLACEHOLDER]"
+        }
+      },
+      {
+        "k": {
+          "fr": "Pourquoi l'Asie du Sud-Est",
+          "en": "Why Southeast Asia"
+        },
+        "v": {
+          "fr": "Une région au centre des équilibres du siècle, où la France a des liens anciens et une voix à faire entendre. [PLACEHOLDER]",
+          "en": "A region at the centre of this century's balance of power, where France has old ties and a voice to make heard. [PLACEHOLDER]"
+        }
+      },
+      {
+        "k": {
+          "fr": "Ce que j'apporte",
+          "en": "What I bring"
+        },
+        "v": {
+          "fr": "Rigueur d'analyse, aisance rédactionnelle, goût du terrain et des langues. [PLACEHOLDER]",
+          "en": "Analytical rigour, clear writing, and a taste for fieldwork and languages. [PLACEHOLDER]"
+        }
+      }
+    ],
+    "quote": {
+      "fr": "« Ce qui compte en diplomatie, ce n'est pas d'avoir raison, c'est de se faire comprendre. »",
+      "en": "“What matters in diplomacy is not being right, but being understood.”"
+    },
+    "quoteSource": {
+      "fr": "Maxime de travail · [PLACEHOLDER]",
+      "en": "Working maxim · [PLACEHOLDER]"
+    }
+  },
+  "parcours": {
+    "title": {
+      "fr": "Parcours",
+      "en": "Background"
+    },
+    "ref": "CB/PRC/02",
+    "experience": [
+      {
+        "period": "2026",
+        "role": {
+          "fr": "Stagiaire, service de coopération et d'action culturelle",
+          "en": "Intern, Cooperation and Cultural Affairs Department"
+        },
+        "org": {
+          "fr": "Institut français · Hanoï [PLACEHOLDER]",
+          "en": "Institut français · Hanoi [PLACEHOLDER]"
+        },
+        "text": {
+          "fr": "Organisation d'un cycle de conférences franco-vietnamiennes, veille médiatique quotidienne, rédaction de notes pour le poste.",
+          "en": "Organised a Franco-Vietnamese lecture series, ran daily media monitoring and drafted briefing notes for the post."
+        }
+      },
+      {
+        "period": "2025",
+        "role": {
+          "fr": "Chargée de mission bénévole",
+          "en": "Volunteer project officer"
+        },
+        "org": {
+          "fr": "ONG d'éducation · Phnom Penh [PLACEHOLDER]",
+          "en": "Education NGO · Phnom Penh [PLACEHOLDER]"
+        },
+        "text": {
+          "fr": "Coordination d'un programme de français langue étrangère pour 120 élèves, en lien avec les partenaires locaux.",
+          "en": "Coordinated a French-as-a-foreign-language programme for 120 pupils with local partners."
+        }
+      },
+      {
+        "period": "2024",
+        "role": {
+          "fr": "Assistante de recherche",
+          "en": "Research assistant"
+        },
+        "org": {
+          "fr": "Centre de recherche sur l'Asie · Paris [PLACEHOLDER]",
+          "en": "Asia research centre · Paris [PLACEHOLDER]"
+        },
+        "text": {
+          "fr": "Revue de littérature sur l'architecture régionale de l'ASEAN, constitution d'une base de données de traités.",
+          "en": "Literature review on ASEAN's regional architecture; built a treaty database."
+        }
+      }
+    ],
+    "education": [
+      {
+        "period": "2025 – 2027",
+        "role": {
+          "fr": "Master Relations internationales, parcours Asie",
+          "en": "MA International Relations, Asia track"
+        },
+        "org": {
+          "fr": "Sciences Po / Inalco [PLACEHOLDER]",
+          "en": "Sciences Po / Inalco [PLACEHOLDER]"
+        },
+        "text": {
+          "fr": "Mémoire : la diplomatie culturelle française au Vietnam depuis 1993.",
+          "en": "Thesis: French cultural diplomacy in Vietnam since 1993."
+        }
+      },
+      {
+        "period": "2024",
+        "role": {
+          "fr": "Semestre d'échange",
+          "en": "Exchange semester"
+        },
+        "org": {
+          "fr": "Université nationale du Vietnam · Hanoï [PLACEHOLDER]",
+          "en": "Vietnam National University · Hanoi [PLACEHOLDER]"
+        },
+        "text": {
+          "fr": "Cours de vietnamien intensif, histoire régionale, économie du développement.",
+          "en": "Intensive Vietnamese, regional history, development economics."
+        }
+      },
+      {
+        "period": "2022 – 2025",
+        "role": {
+          "fr": "Licence Science politique",
+          "en": "BA Political Science"
+        },
+        "org": {
+          "fr": "Université [PLACEHOLDER]",
+          "en": "University [PLACEHOLDER]"
+        },
+        "text": {
+          "fr": "Mention bien. Mineure langues orientales.",
+          "en": "With honours. Minor in Asian languages."
+        }
+      }
+    ]
+  },
+  "dossiers": {
+    "title": {
+      "fr": "Dossiers",
+      "en": "Files"
+    },
+    "ref": "CB/DOS/03",
+    "intro": {
+      "fr": "Notes d'analyse, articles et projets. Chaque dossier est une pièce du puzzle. [PLACEHOLDER]",
+      "en": "Analysis notes, articles and projects. Each file is one piece of the puzzle. [PLACEHOLDER]"
+    },
+    "items": [
+      {
+        "type": {
+          "fr": "Note d'analyse",
+          "en": "Policy brief"
+        },
+        "title": {
+          "fr": "Mer de Chine méridionale : la France, puissance d'équilibre ?",
+          "en": "South China Sea: France as a balancing power?"
+        },
+        "excerpt": {
+          "fr": "Lecture des positions de Paris depuis la stratégie indo-pacifique de 2018, et des marges de manœuvre réelles.",
+          "en": "Reading Paris's positions since the 2018 Indo-Pacific strategy, and its real room for manoeuvre."
+        },
+        "meta": {
+          "fr": "12 p. · Mars 2026",
+          "en": "12 pp. · March 2026"
+        },
+        "tag": "INDO-PACIFIQUE",
+        "url": "#"
+      },
+      {
+        "type": {
+          "fr": "Article",
+          "en": "Article"
+        },
+        "title": {
+          "fr": "La francophonie au Cambodge, une influence discrète",
+          "en": "Francophonie in Cambodia, a quiet influence"
+        },
+        "excerpt": {
+          "fr": "Enquête de terrain auprès des enseignants et des anciens boursiers du gouvernement français.",
+          "en": "Field reporting among teachers and former French government scholarship holders."
+        },
+        "meta": {
+          "fr": "Revue étudiante · 2025",
+          "en": "Student journal · 2025"
+        },
+        "tag": "CULTURE",
+        "url": "#"
+      },
+      {
+        "type": {
+          "fr": "Projet",
+          "en": "Project"
+        },
+        "title": {
+          "fr": "Cartographie des coopérations universitaires franco-ASEAN",
+          "en": "Mapping Franco-ASEAN university partnerships"
+        },
+        "excerpt": {
+          "fr": "Base de données ouverte et visualisation de 340 accords entre établissements.",
+          "en": "An open database and visualisation of 340 inter-institutional agreements."
+        },
+        "meta": {
+          "fr": "Données · 2025",
+          "en": "Data · 2025"
+        },
+        "tag": "COOPÉRATION",
+        "url": "#"
+      },
+      {
+        "type": {
+          "fr": "Mémoire",
+          "en": "Thesis"
+        },
+        "title": {
+          "fr": "Trente ans de diplomatie culturelle au Vietnam",
+          "en": "Thirty years of cultural diplomacy in Vietnam"
+        },
+        "excerpt": {
+          "fr": "De la réouverture de 1993 aux Instituts français d'aujourd'hui : acteurs, moyens, récits.",
+          "en": "From the 1993 reopening to today's Instituts français: actors, means and narratives."
+        },
+        "meta": {
+          "fr": "En cours · 2027",
+          "en": "In progress · 2027"
+        },
+        "tag": "VIETNAM",
+        "url": "#"
+      }
+    ]
+  },
+  "terrain": {
+    "title": {
+      "fr": "Terrain",
+      "en": "Field"
+    },
+    "ref": "CB/TER/04",
+    "intro": {
+      "fr": "Séjours, missions et engagements. La carte se lit comme un passeport. [PLACEHOLDER]",
+      "en": "Stays, assignments and commitments. The map reads like a passport. [PLACEHOLDER]"
+    },
+    "stays": [
+      {
+        "place": "hanoi",
+        "dates": "02.2024 – 07.2024",
+        "what": {
+          "fr": "Semestre d'échange, puis stage à l'Institut français",
+          "en": "Exchange semester, then internship at the Institut français"
+        }
+      },
+      {
+        "place": "phnompenh",
+        "dates": "07.2025 – 09.2025",
+        "what": {
+          "fr": "Mission bénévole, programme de français",
+          "en": "Volunteer assignment, French programme"
+        }
+      },
+      {
+        "place": "bangkok",
+        "dates": "11.2025",
+        "what": {
+          "fr": "Conférence étudiante sur la sécurité régionale",
+          "en": "Student conference on regional security"
+        }
+      },
+      {
+        "place": "singapore",
+        "dates": "04.2026",
+        "what": {
+          "fr": "Model ASEAN, délégation française",
+          "en": "Model ASEAN, French delegation"
+        }
+      }
+    ]
+  },
+  "langues": {
+    "title": {
+      "fr": "Langues",
+      "en": "Languages"
+    },
+    "ref": "CB/LNG/05",
+    "intro": {
+      "fr": "Parler la langue de l'autre, c'est déjà faire la moitié du chemin.",
+      "en": "Speaking the other person's language is already half the journey."
+    },
+    "items": [
+      {
+        "name": {
+          "fr": "Français",
+          "en": "French"
+        },
+        "native": "Français",
+        "lang": "fr",
+        "level": "native",
+        "note": {
+          "fr": "Plume : notes, synthèses, discours",
+          "en": "Writing: briefs, summaries, speeches"
+        }
+      },
+      {
+        "name": {
+          "fr": "Anglais",
+          "en": "English"
+        },
+        "native": "English",
+        "lang": "en",
+        "level": "C1",
+        "note": {
+          "fr": "IELTS 7.5 [PLACEHOLDER]",
+          "en": "IELTS 7.5 [PLACEHOLDER]"
+        }
+      },
+      {
+        "name": {
+          "fr": "Vietnamien",
+          "en": "Vietnamese"
+        },
+        "native": "Tiếng Việt",
+        "lang": "vi",
+        "level": "B1",
+        "note": {
+          "fr": "Semestre à Hanoï, cours intensifs",
+          "en": "Semester in Hanoi, intensive courses"
+        }
+      },
+      {
+        "name": {
+          "fr": "Espagnol",
+          "en": "Spanish"
+        },
+        "native": "Español",
+        "lang": "es",
+        "level": "B2",
+        "note": {
+          "fr": "DELE B2 [PLACEHOLDER]",
+          "en": "DELE B2 [PLACEHOLDER]"
+        }
+      },
+      {
+        "name": {
+          "fr": "Thaï",
+          "en": "Thai"
+        },
+        "native": "ภาษาไทย",
+        "lang": "th",
+        "level": "A2",
+        "note": {
+          "fr": "En cours d'apprentissage",
+          "en": "Currently learning"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "title": {
+      "fr": "Contact",
+      "en": "Contact"
+    },
+    "ref": "CB/CTC/06",
+    "lead": {
+      "fr": "Une mission, un stage, une question ? Écrivez-moi : je réponds sous 48 heures, fuseau horaire permettant.",
+      "en": "An assignment, an internship, a question? Write to me: I reply within 48 hours, time zones permitting."
+    },
+    "emailParts": [
+      "cleo.beaufils",
+      "example",
+      "com"
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/placeholder"
+      }
+    ],
+    "location": {
+      "fr": "Basée à Paris · mobile dans toute l'Asie du Sud-Est",
+      "en": "Based in Paris · mobile across Southeast Asia"
+    },
+    "telegramHead": {
+      "fr": "Télégramme · Diplo/CB/2026\nDe : Cléo Beaufils, Paris\nÀ : vous · Priorité : haute\nObjet : prise de contact stop",
+      "en": "Telegram · Diplo/CB/2026\nFrom: Cléo Beaufils, Paris\nTo: you · Priority: high\nSubject: getting in touch stop"
+    }
+  }
+}

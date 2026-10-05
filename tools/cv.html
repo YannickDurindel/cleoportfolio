@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Placeholder CV. Rendered to assets/cv/*.pdf by tools/build-assets.mjs. Replace the PDFs with the real CV. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500&display=block">
+<style>
+  @page { size: A4; margin: 22mm 20mm; }
+  body { font: 10.5pt/1.55 Inter, sans-serif; color: #0e1a2b; }
+  .mono { font: 500 8pt 'IBM Plex Mono', monospace; letter-spacing: .12em; text-transform: uppercase; color: #b0281f; }
+  h1 { font: 300 46pt/.9 Fraunces, serif; letter-spacing: -.03em; margin: 8mm 0 4mm; }
+  h1 i { color: #0e1a2b; } h1 b { color: #b0281f; font-weight: 300; }
+  h2 { font: 300 18pt Fraunces, serif; border-bottom: 1px solid #0e1a2b; padding-bottom: 2mm; margin: 9mm 0 4mm; }
+  .ph { border: 1px dashed #b08d57; padding: 6mm; color: #5b6577; font-style: italic; }
+</style></head>
+<body>
+<p class="mono" id="k"></p>
+<h1>Cléo <i>Beaufils</i><b>.</b></h1>
+<div id="c"></div>
+<script>
+  const en = new URLSearchParams(location.search).get('l') === 'en';
+  document.getElementById('k').textContent = en ? 'Curriculum vitae · [PLACEHOLDER]' : 'Curriculum vitae · [PLACEHOLDER]';
+  document.getElementById('c').innerHTML = en
+    ? '<h2>Placeholder</h2><p class="ph">This PDF is a placeholder. Replace assets/cv/cleo-beaufils-cv-en.pdf with the real CV (same file name), or change the path in content.json → hero.cv.en.</p>'
+    : '<h2>Document provisoire</h2><p class="ph">Ce PDF est un exemple. Remplacez assets/cv/cleo-beaufils-cv-fr.pdf par le vrai CV (même nom de fichier), ou changez le chemin dans content.json → hero.cv.fr.</p>';
+  document.documentElement.lang = en ? 'en' : 'fr';
+</script>
+</body></html>
