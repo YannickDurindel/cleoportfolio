@@ -1,6 +1,6 @@
 # Cléo Beaufils · portfolio
 
-Maquette de portfolio « la dépêche diplomatique ». Site statique en HTML, CSS et JS vanilla, sans backend, sans traceur ni cookie.
+Portfolio « la dépêche diplomatique ». Site statique en HTML, CSS et JS vanilla, sans backend, sans traceur ni cookie.
 
 **En ligne :** https://yannickdurindel.github.io/cleoportfolio/
 
@@ -12,21 +12,22 @@ content.json          TOUT le texte du site (FR + EN)
 assets/css/style.css  direction artistique
 assets/js/main.js     rendu, cartes, horloges, animations
 assets/js/map-dots.js carte en points générée (Natural Earth, domaine public)
-assets/img/           og.jpg (1200×630), favicons, et l'emplacement de la photo
-assets/cv/            CV en PDF (FR / EN), des exemples pour l'instant
+assets/img/           og.jpg (1200×630), favicons, portrait cleo.jpg
+assets/cv/            CV en PDF (FR / EN), générés depuis content.json par tools/cv.html
+assets/dossiers/      travaux de recherche en PDF (mini-mémoire, essai)
 tools/                pages et script de régénération de og.jpg, des favicons et des CV d'exemple
 ```
 
 ## Remplacer le contenu
 
-1. **Textes** : modifier `content.json`. Chaque champ traduisible a la forme `{ "fr": "…", "en": "…" }`. Cherchez `[PLACEHOLDER]` pour trouver ce qui reste à remplacer.
+1. **Textes** : modifier `content.json`. Chaque champ traduisible a la forme `{ "fr": "…", "en": "…" }`.
    - `parcours.experience` / `parcours.education` : ajouter ou retirer des entrées librement.
-   - `dossiers.items` : `url` peut pointer vers un PDF (`assets/dossiers/note.pdf`) ou un lien externe.
+   - `dossiers.items` : `url` peut pointer vers un PDF (`assets/dossiers/note.pdf`) ou un lien externe ; laissé vide, la carte s'affiche « en cours ».
    - `terrain.stays` : `place` renvoie à une clé de `places`. Pour ajouter une ville, créez-la dans `places` avec `lat`, `lon` et `tz`.
    - `langues.items` : `level` accepte `native`, `A1`, `A2`, `B1`, `B2`, `C1` ou `C2`.
    - `contact.emailParts` : `["prenom.nom", "domaine", "com"]`. L'adresse n'est assemblée qu'au clic.
 2. **Photo** : déposer `assets/img/cleo.jpg` (portrait 4:5, environ 1200×1500), puis écrire `"photo": "assets/img/cleo.jpg"` dans `hero`.
-3. **CV** : remplacer `assets/cv/cleo-beaufils-cv-fr.pdf` et `-en.pdf`, en gardant les mêmes noms.
+3. **CV** : les PDF sont générés depuis `content.json` par `node tools/build-assets.mjs` (voir point 4).
 4. **Aperçu e-mail / LinkedIn** : les balises `og:*` sont dans `index.html`. Pour régénérer l'image : `python3 -m http.server 8765` puis `node tools/build-assets.mjs` (Playwright nécessaire).
 5. Un `git push` sur `main` redéploie automatiquement le site (`.github/workflows/deploy.yml`).
 

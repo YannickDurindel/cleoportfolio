@@ -1,6 +1,6 @@
 // Cléo Beaufils · portfolio. Vanilla JS, no tracker, no dependency.
 // All copy comes from content.json; this file only renders it.
-import { MAP_DOTS, MAP_DOTS_SEA } from './map-dots.js';
+import { MAP_DOTS } from './map-dots.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -81,8 +81,8 @@ function arcPath(a, b, bend = .32) {
 
 // label placement for the hero map (dx, anchor)
 const LABEL = {
-  paris: [12, 'start', -4], hanoi: [12, 'start', -6], bangkok: [-12, 'end', -2], phnompenh: [12, 'start', 6],
-  kualalumpur: [-12, 'end', 4], singapore: [12, 'start', 8], jakarta: [12, 'start', 8], manila: [12, 'start', -2],
+  pecs: [12, 'start', -6], beijing: [-12, 'end', -4], seoul: [-12, 'end', -8], zhongli: [-12, 'end', 4],
+  manila: [-12, 'end', 6], hanoi: [-12, 'end', 14], singapore: [12, 'start', 8],
 };
 
 /* ---------------- hero map ---------------- */
@@ -92,10 +92,10 @@ function drawHeroMap() {
   svg.innerHTML = '';
   svg.setAttribute('aria-label', t(C.ui.heroMap));
   const fig = svg.closest('.map');
-  const P = C.places, origin = P.paris;
+  const P = C.places, origin = P[C.heroOrigin] || P.paris;
   const o = proj(origin.lon, origin.lat);
   const small = narrow.matches;
-  svg.setAttribute('viewBox', small ? '600 165 400 310' : '0 30 1000 450');
+  svg.setAttribute('viewBox', small ? '690 95 310 330' : '0 10 1000 470');
 
   graticule(svg, { labels: !small });
   el('path', { d: MAP_DOTS, class: 'map__dots', 'aria-hidden': 'true' }, svg);
@@ -107,7 +107,7 @@ function drawHeroMap() {
   C.heroRoutes.forEach((key, i) => {
     const p = P[key]; if (!p) return;
     const xy = proj(p.lon, p.lat);
-    const d = arcPath(o, xy, .14 + (i % 3) * .035);
+    const d = arcPath(o, xy, .06 + (i % 3) * .03);
     el('path', { d, class: 'map__arc map__arc--glow', pathLength: 1, style: `--i:${i}` }, arcs);
     el('path', { d, class: 'map__arc', pathLength: 1, id: `arc-${key}`, style: `--i:${i}` }, arcs);
     if (motion) {
@@ -122,7 +122,7 @@ function drawHeroMap() {
     const g = el('g', { class: 'map__node', style: `--i:${i}` }, nodes);
     el('circle', { cx: xy[0], cy: xy[1], r: 3.2, class: 'map__city' }, g);
     const lab = el('text', { x: xy[0] + dx, y: xy[1] + dy, 'text-anchor': anchor, class: 'map__label' }, g);
-    lab.textContent = t(p.name);
+    lab.textContent = t(p.label || p.name);
     if (!small) {
       const sub = el('text', { x: xy[0] + dx, y: xy[1] + dy + 11, 'text-anchor': anchor, class: 'map__sub' }, g);
       sub.textContent = `${nf().format(km(origin, p))} KM`;
@@ -132,7 +132,7 @@ function drawHeroMap() {
   const g = el('g', { class: 'map__node map__node--origin' }, nodes);
   if (small) {
     // Paris lies off-frame on narrow screens: arcs fly in from the west
-    const tx = el('text', { x: 612, y: 190, class: 'map__offscreen' }, g);
+    const tx = el('text', { x: 700, y: 115, class: 'map__offscreen' }, g);
     tx.textContent = `← ${t(origin.name)}`;
   } else {
     el('circle', { cx: o[0], cy: o[1], r: 4, class: 'map__city map__city--origin' }, g);
@@ -191,7 +191,7 @@ function drawField() {
   svg.innerHTML = '';
   svg.setAttribute('aria-label', t(C.ui.fieldMap));
   graticule(svg, { labels: false });
-  el('path', { d: MAP_DOTS_SEA, class: 'map__dots', 'aria-hidden': 'true' }, svg);
+  el('path', { d: MAP_DOTS, class: 'map__dots', 'aria-hidden': 'true' }, svg);
   const stays = C.terrain.stays.filter((s) => C.places[s.place]);
   // itinerary in chronological order
   const pts = stays.map((s) => proj(C.places[s.place].lon, C.places[s.place].lat));
@@ -202,8 +202,8 @@ function drawField() {
     el('circle', { cx: x, cy: y, r: 11, class: 'pin__halo' }, g);
     el('circle', { cx: x, cy: y, r: 6, class: 'pin__dot' }, g);
     el('text', { x, y: y + 1.8, 'text-anchor': 'middle', class: 'pin__n' }, g).textContent = String(i + 1).padStart(2, '0');
-    const left = x > 800 ? false : x < 790;
-    el('text', { x: x + (left ? -15 : 15), y: y + 3.5, 'text-anchor': left ? 'end' : 'start', class: 'pin__label' }, g).textContent = t(p.name);
+    const left = p.side ? p.side === 'end' : x > 500;
+    el('text', { x: x + (left ? -15 : 15), y: y + 3.5, 'text-anchor': left ? 'end' : 'start', class: 'pin__label' }, g).textContent = t(p.label || p.name);
   });
 
   const colors = ['var(--red)', 'var(--ink)', 'var(--brass-ink)', 'var(--red)', 'var(--ink)'];
@@ -348,12 +348,12 @@ function profil() {
 
 function parcours() {
   $$('[data-tl]').forEach((ol) => {
-    ol.innerHTML = C.parcours[ol.dataset.tl].map((e) => `
+    ol.innerHTML = (C.parcours[ol.dataset.tl] || []).map((e) => `
       <li class="tl__item" data-reveal>
         <p class="tl__period">${esc(e.period)}</p>
         <h4 class="tl__role">${tx(e.role)}</h4>
         <p class="tl__org">${tx(e.org)}</p>
-        <p class="tl__text">${tx(e.text)}</p>
+        ${t(e.text) ? `<p class="tl__text">${tx(e.text)}</p>` : ''}
       </li>`).join('');
   });
 }
@@ -362,17 +362,17 @@ function dossiers() {
   const arrow = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11m0 0-4-4m4 4-4 4"/></svg>';
   $('[data-files]').innerHTML = C.dossiers.items.map((f, i) => {
     const no = `${C.dossiers.ref.split('/').pop()}-${String.fromCharCode(65 + i)}`;
+    const live = !!f.url;
     return `<li class="file" data-reveal style="--d:${(i % 2) * .12}s">
-      <a class="file__card" href="${esc(f.url || '#')}" data-tag="${esc(f.tag)}" data-cursor="read"${/^https?:/.test(f.url) ? ' target="_blank" rel="noopener"' : ''}>
+      <${live ? 'a' : 'div'} class="file__card${live ? '' : ' file__card--draft'}"${live ? ` href="${esc(f.url)}" data-cursor="read" target="_blank" rel="noopener"` : ''} data-tag="${esc(f.tag)}">
         <span class="file__top mono"><span class="file__type">${tx(f.type)}</span><span>N°${no}</span></span>
         <h3 class="file__title">${tx(f.title)}</h3>
         <p class="file__excerpt">${tx(f.excerpt)}</p>
-        <span class="file__foot mono"><span>${tx(f.meta)}</span><span class="file__read">${tx(C.ui.read)} ${arrow}</span></span>
-        <span class="file__classified">${stamp({ shape: 'rect', color: 'var(--red)', top: 'CB · 2026', center: t(C.ui.released).split(' ')[0], bottom: t(C.ui.released).split(' ').slice(1).join(' ') })}</span>
-      </a>
+        <span class="file__foot mono"><span>${tx(f.meta)}</span>${live ? `<span class="file__read">${tx(C.ui.read)} ${arrow}</span>` : `<span>${tx(C.ui.inProgress)}</span>`}</span>
+        ${live ? `<span class="file__classified">${stamp({ shape: 'rect', color: 'var(--red)', top: 'CB · 2026', center: t(C.ui.released).split(' ')[0], bottom: t(C.ui.released).split(' ').slice(1).join(' ') })}</span>` : ''}
+      </${live ? 'a' : 'div'}>
     </li>`;
   }).join('');
-  $$('.file__card[href="#"]').forEach((a) => a.addEventListener('click', (e) => e.preventDefault()));
 }
 
 function langues() {

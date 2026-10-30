@@ -1,26 +1,70 @@
 <!doctype html>
 <html><head><meta charset="utf-8">
-<!-- Placeholder CV. Rendered to assets/cv/*.pdf by tools/build-assets.mjs. Replace the PDFs with the real CV. -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500&display=block">
+<!-- CV rendered from content.json. Built to assets/cv/*.pdf by tools/build-assets.mjs (?l=fr or ?l=en). -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&display=block">
 <style>
-  @page { size: A4; margin: 22mm 20mm; }
-  body { font: 10.5pt/1.55 Inter, sans-serif; color: #0e1a2b; }
-  .mono { font: 500 8pt 'IBM Plex Mono', monospace; letter-spacing: .12em; text-transform: uppercase; color: #b0281f; }
-  h1 { font: 300 46pt/.9 Fraunces, serif; letter-spacing: -.03em; margin: 8mm 0 4mm; }
-  h1 i { color: #0e1a2b; } h1 b { color: #b0281f; font-weight: 300; }
-  h2 { font: 300 18pt Fraunces, serif; border-bottom: 1px solid #0e1a2b; padding-bottom: 2mm; margin: 9mm 0 4mm; }
-  .ph { border: 1px dashed #b08d57; padding: 6mm; color: #5b6577; font-style: italic; }
+  @page { size: A4; margin: 14mm 16mm 12mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font: 8.9pt/1.42 Inter, sans-serif; color: #0e1a2b; }
+  .mono { font: 500 7pt 'IBM Plex Mono', monospace; letter-spacing: .12em; text-transform: uppercase; color: #b0281f; }
+  header { display: grid; grid-template-columns: 1fr auto; gap: 6mm; align-items: end; border-bottom: 1.2pt solid #0e1a2b; padding-bottom: 4mm; }
+  h1 { font: 300 34pt/.9 Fraunces, serif; letter-spacing: -.03em; margin: 2mm 0 2.5mm; }
+  h1 b { color: #b0281f; font-weight: 300; }
+  .sub { font: 400 11pt/1.3 Fraunces, serif; }
+  .status { margin-top: 1.5mm; font-weight: 500; color: #b0281f; }
+  .contact { text-align: right; line-height: 1.7; }
+  .contact a { color: inherit; text-decoration: none; }
+  .profile { margin: 4mm 0 1mm; font-size: 9.2pt; }
+  h2 { font: 400 13pt Fraunces, serif; border-bottom: .6pt solid #c9bfae; padding-bottom: 1mm; margin: 4.5mm 0 2.2mm; display: flex; justify-content: space-between; align-items: baseline; }
+  .it { display: grid; grid-template-columns: 24mm 1fr; gap: 3mm; margin-bottom: 2.2mm; break-inside: avoid; }
+  .it .p { font: 500 7.2pt 'IBM Plex Mono', monospace; color: #8a6b35; padding-top: .6mm; }
+  .it h3 { font-size: 9.2pt; font-weight: 600; }
+  .it .o { color: #5b6577; }
+  .it .t { margin-top: .5mm; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 8mm; }
+  .langs { display: flex; gap: 8mm; }
+  .langs b { font-weight: 600; }
 </style></head>
 <body>
-<p class="mono" id="k"></p>
-<h1>Cléo <i>Beaufils</i><b>.</b></h1>
+<header>
+  <div>
+    <p class="mono" id="k"></p>
+    <h1>Cléo <i>Beaufils</i><b>.</b></h1>
+    <p class="sub" id="sub"></p>
+    <p class="status" id="status"></p>
+  </div>
+  <div class="contact" id="contact"></div>
+</header>
+<p class="profile" id="profile"></p>
 <div id="c"></div>
-<script>
-  const en = new URLSearchParams(location.search).get('l') === 'en';
-  document.getElementById('k').textContent = en ? 'Curriculum vitae · [PLACEHOLDER]' : 'Curriculum vitae · [PLACEHOLDER]';
-  document.getElementById('c').innerHTML = en
-    ? '<h2>Placeholder</h2><p class="ph">This PDF is a placeholder. Replace assets/cv/cleo-beaufils-cv-en.pdf with the real CV (same file name), or change the path in content.json → hero.cv.en.</p>'
-    : '<h2>Document provisoire</h2><p class="ph">Ce PDF est un exemple. Remplacez assets/cv/cleo-beaufils-cv-fr.pdf par le vrai CV (même nom de fichier), ou changez le chemin dans content.json → hero.cv.fr.</p>';
-  document.documentElement.lang = en ? 'en' : 'fr';
+<script type="module">
+  const l = new URLSearchParams(location.search).get('l') === 'en' ? 'en' : 'fr';
+  const C = await (await fetch('../content.json')).json();
+  const t = (v) => (v && typeof v === 'object') ? (v[l] ?? v.fr) : (v ?? '');
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const L = l === 'en'
+    ? { k: 'Curriculum vitae · 2026', edu: 'Education', exp: 'Experience', res: 'Research', eng: 'Commitments', lng: 'Languages', site: 'Portfolio', native: 'native', sub: "Master's in International Law · International relations · Asia-Pacific" }
+    : { k: 'Curriculum vitae · 2026', edu: 'Formation', exp: 'Expériences', res: 'Travaux de recherche', eng: 'Engagements', lng: 'Langues', site: 'Portfolio', native: 'langue maternelle', sub: 'Master de droit international · Relations internationales · Asie-Pacifique' };
+  document.documentElement.lang = l;
+  document.getElementById('k').textContent = L.k;
+  document.getElementById('sub').textContent = L.sub;
+  document.getElementById('status').textContent = t(C.hero.status);
+  const mail = C.contact.emailParts[0] + '@' + C.contact.emailParts[1] + '.' + C.contact.emailParts[2];
+  document.getElementById('contact').innerHTML = `<a href="mailto:${mail}">${mail}</a><br>
+    <a href="https://www.linkedin.com/in/cleo-beaufils/">linkedin.com/in/cleo-beaufils</a><br>
+    <a href="https://yannickdurindel.github.io/cleoportfolio/">yannickdurindel.github.io/cleoportfolio</a><br>${esc(t(C.contact.location).split(' · ')[0])}`;
+  document.getElementById('profile').textContent = t(C.hero.tagline);
+  const item = (e) => `<div class="it"><p class="p">${esc(e.period)}</p><div><h3>${esc(t(e.role))}</h3><p class="o">${esc(t(e.org))}</p>${t(e.text) ? `<p class="t">${esc(t(e.text))}</p>` : ''}</div></div>`;
+  const P = C.parcours;
+  const res = C.dossiers.items.map((f) => item({ period: t(f.meta).split(' · ').pop(), role: f.title, org: { fr: `${t(f.type)} · ${t(f.meta)}`, en: `${t(f.type)} · ${t(f.meta)}` } })).join('');
+  const langs = C.langues.items.map((x) => `<span><b>${esc(t(x.name))}</b> · ${x.level === 'native' ? L.native : x.level}${x.level === 'native' ? '' : ` (${esc(t(x.note).split(' · ')[0])})`}</span>`).join('');
+  document.getElementById('c').innerHTML = `
+    <h2>${L.edu}</h2>${P.education.map(item).join('')}
+    <h2>${L.exp}</h2>${P.experience.map(item).join('')}
+    <h2>${L.res}</h2>${res}
+    <h2>${L.eng}</h2><div class="cols"><div>${P.engagements.slice(0, 2).map(item).join('')}</div><div>${P.engagements.slice(2).map(item).join('')}</div></div>
+    <h2>${L.lng}</h2><p class="langs">${langs}</p>`;
+  await document.fonts.ready;
+  document.body.dataset.ready = '';
 </script>
 </body></html>

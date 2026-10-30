@@ -6,7 +6,7 @@
   html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
   body { background: #0e1a2b; color: #f4efe6; font-family: Inter, sans-serif; position: relative; }
   .grain { position: absolute; inset: 0; opacity: .5; mix-blend-mode: screen; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
-  .map { position: absolute; right: -30px; top: 40px; width: 820px; opacity: 1; }
+  .map { position: absolute; right: 16px; top: 34px; width: 780px; opacity: 1; }
   .map .dots { stroke: rgba(244,239,230,.22); stroke-width: 3.4; stroke-linecap: round; fill: none; }
   .map .arc { fill: none; stroke: #d4b47c; stroke-width: 1.5; }
   .map .city { fill: #f4efe6; } .map .origin { fill: #d9473c; }
@@ -22,18 +22,18 @@
 </style></head>
 <body>
 <div class="rule"></div>
-<svg class="map" viewBox="0 30 1000 450" id="map"></svg>
+<svg class="map" viewBox="0 -40 1000 520" id="map"></svg>
 <div class="grain"></div>
 <div class="txt">
-  <p class="mono" style="margin:0">Dépêche N°2026-01 · Portfolio</p>
+  <p class="mono" style="margin:0">Dépêche N°2026-10 · Portfolio</p>
   <h1>Cléo<i>Beaufils<b>.</b></i></h1>
-  <p class="sub" style="margin:0 0 70px">Diplomatie &amp; Asie du Sud-Est</p>
+  <p class="sub" style="margin:0 0 70px">Droit international &amp; Asie-Pacifique</p>
 </div>
-<div class="foot mono"><span>Paris → Hanoï · Bangkok · Jakarta · Singapour · Manille</span><span>48°51′N 2°21′E</span></div>
+<div class="foot mono"><span>Tours · Pécs · Reims → Zhongli, Taïwan</span><span>24°58′N 121°14′E</span></div>
 <script type="module">
   import { MAP_DOTS } from '../assets/js/map-dots.js';
   const K = 1000 / 144, P = (lon, lat) => [(lon + 12) * K, (58 - lat) * K];
-  const C = [[105.83, 21.03], [100.5, 13.76], [106.85, -6.21], [103.82, 1.35], [104.93, 11.56], [101.69, 3.14], [120.98, 14.6]];
+  const C = [[18.23, 46.07], [116.41, 39.9], [126.98, 37.57], [121.23, 24.95], [120.98, 14.6], [105.83, 21.03], [103.82, 1.35]];
   const o = P(2.35, 48.86);
   let s = `<path class="dots" d="${MAP_DOTS}"/>`;
   C.forEach(([lon, lat], i) => {

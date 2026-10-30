@@ -1,20 +1,20 @@
 {
-  "_readme": "Tout le texte du site vit ici. Chaque champ traduisible est un objet {\"fr\": \"…\", \"en\": \"…\"}. Les champs marqués [PLACEHOLDER] sont à remplacer. Voir README.md.",
+  "_readme": "Tout le texte du site vit ici. Chaque champ traduisible est un objet {\"fr\": \"…\", \"en\": \"…\"}. Voir README.md.",
   "meta": {
     "name": "Cléo Beaufils",
     "firstName": "Cléo",
     "lastName": "Beaufils",
     "title": {
-      "fr": "Cléo Beaufils · Diplomatie & Asie du Sud-Est",
-      "en": "Cléo Beaufils · Diplomacy & Southeast Asia"
+      "fr": "Cléo Beaufils · Droit international & Asie-Pacifique",
+      "en": "Cléo Beaufils · International Law & Asia-Pacific"
     },
     "description": {
-      "fr": "Portfolio de Cléo Beaufils : relations internationales, diplomatie française et Asie du Sud-Est. [PLACEHOLDER]",
-      "en": "Portfolio of Cléo Beaufils: international relations, French diplomacy and Southeast Asia. [PLACEHOLDER]"
+      "fr": "Portfolio de Cléo Beaufils, étudiante en Master 2 de droit international en mobilité à Taïwan : parcours, travaux de recherche et contact.",
+      "en": "Portfolio of Cléo Beaufils, International Law master's student on exchange in Taiwan: background, research papers and contact."
     },
     "edition": {
-      "fr": "Édition Asie du Sud-Est",
-      "en": "Southeast Asia Edition"
+      "fr": "Édition Asie-Pacifique",
+      "en": "Asia-Pacific Edition"
     },
     "volume": {
       "fr": "Vol. I · N°01",
@@ -121,16 +121,16 @@
       "en": "Close menu"
     },
     "helloBtn": {
-      "fr": "Bonjour en sept langues : afficher la suivante",
-      "en": "Hello in seven languages: show the next one"
+      "fr": "Bonjour en quatre langues : afficher la suivante",
+      "en": "Hello in four languages: show the next one"
     },
     "fieldMap": {
-      "fr": "Carte des séjours en Asie du Sud-Est",
-      "en": "Map of stays in Southeast Asia"
+      "fr": "Carte des étapes du parcours, de Tours à Zhongli",
+      "en": "Map of the stages of the journey, from Tours to Zhongli"
     },
     "heroMap": {
-      "fr": "Carte reliant Paris à sept capitales d'Asie du Sud-Est",
-      "en": "Map linking Paris to seven Southeast Asian capitals"
+      "fr": "Carte reliant Paris à Taïwan et aux capitales d'Asie-Pacifique",
+      "en": "Map linking Paris to Taiwan and Asia-Pacific capitals"
     },
     "released": {
       "fr": "Diffusion libre",
@@ -141,8 +141,8 @@
       "en": "Read"
     },
     "stampTop": {
-      "fr": "Paris → Asie du Sud-Est",
-      "en": "Paris → Southeast Asia"
+      "fr": "Paris → Taïwan",
+      "en": "Paris → Taiwan"
     },
     "stampBottom": {
       "fr": "Dépêche N°01",
@@ -155,24 +155,32 @@
     "photoPlaceholder": {
       "fr": "Photo à venir",
       "en": "Photo to come"
+    },
+    "engagements": {
+      "fr": "Engagements",
+      "en": "Commitments"
+    },
+    "inProgress": {
+      "fr": "En cours",
+      "en": "In progress"
     }
   },
   "hero": {
     "kicker": {
-      "fr": "Dépêche n°2026-01 · Paris → Asie du Sud-Est",
-      "en": "Dispatch no. 2026-01 · Paris → Southeast Asia"
+      "fr": "Dépêche n°2026-10 · Reims → Zhongli, Taïwan",
+      "en": "Dispatch no. 2026-10 · Reims → Zhongli, Taiwan"
     },
     "greetingSuffix": {
       "fr": "je suis",
       "en": "I am"
     },
     "tagline": {
-      "fr": "Étudiante en relations internationales. Je me prépare à servir la diplomatie française en Asie du Sud-Est : coopération, culture, et l'art patient de se comprendre. [PLACEHOLDER]",
-      "en": "International relations student preparing to serve French diplomacy in Southeast Asia: cooperation, culture, and the patient art of mutual understanding. [PLACEHOLDER]"
+      "fr": "Étudiante en Master 2 de droit international, en mobilité académique à Taïwan. Je mets mon double profil, droit international et relations internationales, au service de la diplomatie française et de la recherche en Asie-Pacifique.",
+      "en": "International Law master's student (M2), currently on academic exchange in Taiwan. I bring a dual background in international law and international relations to French diplomacy and to research on the Asia-Pacific."
     },
     "status": {
-      "fr": "Disponible pour un stage · printemps 2027 [PLACEHOLDER]",
-      "en": "Available for an internship · spring 2027 [PLACEHOLDER]"
+      "fr": "Disponible dès janvier 2027 · stage en institut de recherche ou organisation internationale",
+      "en": "Available from January 2027 · internship in a research institute or international organisation"
     },
     "ctaCv": {
       "fr": "Télécharger le CV",
@@ -186,18 +194,18 @@
       "fr": "assets/cv/cleo-beaufils-cv-fr.pdf",
       "en": "assets/cv/cleo-beaufils-cv-en.pdf"
     },
-    "photo": "",
+    "photo": "assets/img/cleo.jpg",
     "photoAlt": {
       "fr": "Portrait de Cléo Beaufils",
       "en": "Portrait of Cléo Beaufils"
     },
     "photoCaption": {
-      "fr": "Portrait · [PLACEHOLDER]",
-      "en": "Portrait · [PLACEHOLDER]"
+      "fr": "Portrait · 2026",
+      "en": "Portrait · 2026"
     },
     "mapCaption": {
-      "fr": "Fig. 1 · Paris et sept capitales de l'ASEAN. Distances orthodromiques.",
-      "en": "Fig. 1 · Paris and seven ASEAN capitals. Great-circle distances."
+      "fr": "Fig. 1 · De Paris à Taïwan et aux capitales d'Asie-Pacifique. Distances orthodromiques.",
+      "en": "Fig. 1 · From Paris to Taiwan and Asia-Pacific capitals. Great-circle distances."
     }
   },
   "greetings": [
@@ -212,29 +220,14 @@
       "label": "English"
     },
     {
-      "text": "Xin chào",
-      "lang": "vi",
-      "label": "Tiếng Việt"
+      "text": "你好",
+      "lang": "zh-Hant",
+      "label": "中文 · 臺灣"
     },
     {
-      "text": "สวัสดี",
-      "lang": "th",
-      "label": "ภาษาไทย"
-    },
-    {
-      "text": "Halo",
-      "lang": "id",
-      "label": "Bahasa Indonesia"
-    },
-    {
-      "text": "ជំរាបសួរ",
-      "lang": "km",
-      "label": "ភាសាខ្មែរ"
-    },
-    {
-      "text": "Apa khabar",
-      "lang": "ms",
-      "label": "Bahasa Melayu"
+      "text": "Szia",
+      "lang": "hu",
+      "label": "Magyar"
     }
   ],
   "places": {
@@ -247,59 +240,67 @@
       "lon": 2.3522,
       "tz": "Europe/Paris"
     },
-    "hanoi": {
+    "tours": {
       "name": {
-        "fr": "Hanoï",
-        "en": "Hanoi"
+        "fr": "Tours",
+        "en": "Tours"
       },
-      "lat": 21.0278,
-      "lon": 105.8342,
-      "tz": "Asia/Ho_Chi_Minh"
+      "lat": 47.3941,
+      "lon": 0.6848,
+      "tz": "Europe/Paris",
+      "side": "end"
     },
-    "bangkok": {
+    "reims": {
       "name": {
-        "fr": "Bangkok",
-        "en": "Bangkok"
+        "fr": "Reims",
+        "en": "Reims"
       },
-      "lat": 13.7563,
-      "lon": 100.5018,
-      "tz": "Asia/Bangkok"
+      "lat": 49.2583,
+      "lon": 4.0317,
+      "tz": "Europe/Paris",
+      "side": "start"
     },
-    "jakarta": {
+    "pecs": {
       "name": {
-        "fr": "Jakarta",
-        "en": "Jakarta"
+        "fr": "Pécs",
+        "en": "Pécs"
       },
-      "lat": -6.2088,
-      "lon": 106.8456,
-      "tz": "Asia/Jakarta"
+      "lat": 46.0727,
+      "lon": 18.2323,
+      "tz": "Europe/Budapest",
+      "side": "start"
     },
-    "singapore": {
+    "zhongli": {
       "name": {
-        "fr": "Singapour",
-        "en": "Singapore"
+        "fr": "Zhongli",
+        "en": "Zhongli"
       },
-      "lat": 1.3521,
-      "lon": 103.8198,
-      "tz": "Asia/Singapore"
+      "lat": 24.9537,
+      "lon": 121.2257,
+      "tz": "Asia/Taipei",
+      "side": "end",
+      "label": {
+        "fr": "Zhongli · Taïwan",
+        "en": "Zhongli · Taiwan"
+      }
     },
-    "phnompenh": {
+    "beijing": {
       "name": {
-        "fr": "Phnom Penh",
-        "en": "Phnom Penh"
+        "fr": "Pékin",
+        "en": "Beijing"
       },
-      "lat": 11.5564,
-      "lon": 104.9282,
-      "tz": "Asia/Phnom_Penh"
+      "lat": 39.9042,
+      "lon": 116.4074,
+      "tz": "Asia/Shanghai"
     },
-    "kualalumpur": {
+    "seoul": {
       "name": {
-        "fr": "Kuala Lumpur",
-        "en": "Kuala Lumpur"
+        "fr": "Séoul",
+        "en": "Seoul"
       },
-      "lat": 3.139,
-      "lon": 101.6869,
-      "tz": "Asia/Kuala_Lumpur"
+      "lat": 37.5665,
+      "lon": 126.978,
+      "tz": "Asia/Seoul"
     },
     "manila": {
       "name": {
@@ -309,23 +310,40 @@
       "lat": 14.5995,
       "lon": 120.9842,
       "tz": "Asia/Manila"
+    },
+    "hanoi": {
+      "name": {
+        "fr": "Hanoï",
+        "en": "Hanoi"
+      },
+      "lat": 21.0278,
+      "lon": 105.8342,
+      "tz": "Asia/Ho_Chi_Minh"
+    },
+    "singapore": {
+      "name": {
+        "fr": "Singapour",
+        "en": "Singapore"
+      },
+      "lat": 1.3521,
+      "lon": 103.8198,
+      "tz": "Asia/Singapore"
     }
   },
   "heroRoutes": [
+    "pecs",
+    "beijing",
+    "seoul",
+    "zhongli",
+    "manila",
     "hanoi",
-    "bangkok",
-    "phnompenh",
-    "kualalumpur",
-    "singapore",
-    "jakarta",
-    "manila"
+    "singapore"
   ],
   "clocks": [
     "paris",
-    "hanoi",
-    "bangkok",
-    "jakarta",
-    "singapore"
+    "zhongli",
+    "seoul",
+    "hanoi"
   ],
   "profil": {
     "title": {
@@ -334,38 +352,38 @@
     },
     "ref": "CB/PRF/01",
     "lead": {
-      "fr": "La diplomatie, c'est d'abord une écoute. J'ai appris à la pratiquer entre deux langues, deux fuseaux horaires et des cultures qui ne se lisent pas de la même façon. [PLACEHOLDER]",
-      "en": "Diplomacy begins with listening. I learned to practise it between two languages, two time zones and cultures that are not read the same way. [PLACEHOLDER]"
+      "fr": "Le droit international ne vaut que s'il protège. C'est à partir de cette conviction que j'étudie les crises de l'Asie-Pacifique, au plus près du terrain, depuis Taïwan.",
+      "en": "International law is only worth what it protects. That conviction shapes how I study crises in the Asia-Pacific, as close to the ground as possible, from Taiwan."
     },
     "body": [
       {
-        "fr": "Étudiante en master de relations internationales [PLACEHOLDER], je m'intéresse à la place de la France dans l'Indo-Pacifique : coopération universitaire, diplomatie culturelle, sécurité maritime en mer de Chine méridionale.",
-        "en": "A master's student in international relations [PLACEHOLDER], I focus on France's role in the Indo-Pacific: academic cooperation, cultural diplomacy and maritime security in the South China Sea."
+        "fr": "Étudiante en Master de droit international à l'Université de Reims Champagne-Ardenne, je suis ma deuxième année en mobilité à l'Université centrale nationale (NCU) de Zhongli, à Taïwan. Mon parcours mêle droit public, science politique et relations internationales, de la Licence à Tours à un semestre de droits humains à Pécs, en Hongrie.",
+        "en": "I am a master's student in International Law at the University of Reims Champagne-Ardenne, spending my second year on exchange at National Central University (NCU) in Zhongli, Taiwan. My path combines public law, political science and international relations, from my bachelor's in Tours to a year of human rights law in Pécs, Hungary."
       },
       {
-        "fr": "Un semestre à Hanoï m'a appris que l'influence se construit par la confiance, sur le temps long. Je souhaite mettre cette conviction au service d'une ambassade, d'un consulat ou d'un Institut français de la région. [PLACEHOLDER]",
-        "en": "A semester in Hanoi taught me that influence is built on trust, over time. I want to bring that conviction to an embassy, consulate or Institut français in the region. [PLACEHOLDER]"
+        "fr": "Mes recherches portent sur la légalité des « exercices militaires » de la République populaire de Chine autour de Taïwan, sur la prohibition de la torture comparée entre les États-Unis et la Chine, et aujourd'hui sur le rôle stratégique des technologies taïwanaises dans l'équilibre des puissances. Passée par l'Académie diplomatique d'été du ministère de l'Europe et des Affaires étrangères, je cherche un stage en institut de recherche ou en organisation internationale à partir de janvier 2027.",
+        "en": "My research covers the legality of the People's Republic of China's \"military exercises\" around Taiwan, a comparison of the prohibition of torture in the United States and China, and now the strategic role of Taiwanese technologies in the balance of power. An alumna of the French Foreign Ministry's Summer Diplomatic Academy, I am looking for an internship in a research institute or international organisation from January 2027."
       }
     ],
     "pillars": [
       {
         "k": {
-          "fr": "Pourquoi la diplomatie",
-          "en": "Why diplomacy"
+          "fr": "Droit international",
+          "en": "International law"
         },
         "v": {
-          "fr": "Servir l'intérêt général au point de contact entre deux sociétés. [PLACEHOLDER]",
-          "en": "Serving the public interest where two societies meet. [PLACEHOLDER]"
+          "fr": "Droit international public et économique, droit de la mer, contentieux européen, jurisprudence de la CEDH.",
+          "en": "Public and economic international law, law of the sea, European litigation, ECHR case law."
         }
       },
       {
         "k": {
-          "fr": "Pourquoi l'Asie du Sud-Est",
-          "en": "Why Southeast Asia"
+          "fr": "Asie-Pacifique",
+          "en": "Asia-Pacific"
         },
         "v": {
-          "fr": "Une région au centre des équilibres du siècle, où la France a des liens anciens et une voix à faire entendre. [PLACEHOLDER]",
-          "en": "A region at the centre of this century's balance of power, where France has old ties and a voice to make heard. [PLACEHOLDER]"
+          "fr": "Détroit de Taïwan, géopolitique de l'Asie de l'Est, technologies et relations internationales, étudiées sur place.",
+          "en": "The Taiwan Strait, East Asian geopolitics, technology and international relations, studied on the ground."
         }
       },
       {
@@ -374,18 +392,18 @@
           "en": "What I bring"
         },
         "v": {
-          "fr": "Rigueur d'analyse, aisance rédactionnelle, goût du terrain et des langues. [PLACEHOLDER]",
-          "en": "Analytical rigour, clear writing, and a taste for fieldwork and languages. [PLACEHOLDER]"
+          "fr": "Recherche juridique, analyse comparée, rédaction en français et en anglais, expérience de la négociation simulée.",
+          "en": "Legal research, comparative analysis, drafting in French and English, and hands-on negotiation simulation."
         }
       }
     ],
     "quote": {
-      "fr": "« Ce qui compte en diplomatie, ce n'est pas d'avoir raison, c'est de se faire comprendre. »",
-      "en": "“What matters in diplomacy is not being right, but being understood.”"
+      "fr": "« Le droit devient inutile s'il ne protège plus l'être humain mais sert l'intérêt des puissances. »",
+      "en": "“Law becomes useless when it no longer protects human beings but serves the interests of the powerful.”"
     },
     "quoteSource": {
-      "fr": "Maxime de travail · [PLACEHOLDER]",
-      "en": "Working maxim · [PLACEHOLDER]"
+      "fr": "Mini-mémoire de recherche · 2026",
+      "en": "Research paper · 2026"
     }
   },
   "parcours": {
@@ -396,95 +414,202 @@
     "ref": "CB/PRC/02",
     "experience": [
       {
-        "period": "2026",
+        "period": "2025 – 2026",
         "role": {
-          "fr": "Stagiaire, service de coopération et d'action culturelle",
-          "en": "Intern, Cooperation and Cultural Affairs Department"
+          "fr": "Emploi étudiant, Mission Handicap",
+          "en": "Student job, Disability Support Office"
         },
         "org": {
-          "fr": "Institut français · Hanoï [PLACEHOLDER]",
-          "en": "Institut français · Hanoi [PLACEHOLDER]"
+          "fr": "Université de Reims Champagne-Ardenne",
+          "en": "University of Reims Champagne-Ardenne"
         },
         "text": {
-          "fr": "Organisation d'un cycle de conférences franco-vietnamiennes, veille médiatique quotidienne, rédaction de notes pour le poste.",
-          "en": "Organised a Franco-Vietnamese lecture series, ran daily media monitoring and drafted briefing notes for the post."
+          "fr": "Prise de notes rigoureuse en amphithéâtre pour des étudiants en situation de handicap ; secrétariat d'examen, adaptation et accompagnement pendant les épreuves.",
+          "en": "Detailed lecture note-taking for students with disabilities; exam secretary, adapting and assisting during exams."
         }
       },
       {
-        "period": "2025",
+        "period": "07.2025",
         "role": {
-          "fr": "Chargée de mission bénévole",
-          "en": "Volunteer project officer"
+          "fr": "Stagiaire, Académie diplomatique d'été",
+          "en": "Participant, Summer Diplomatic Academy"
         },
         "org": {
-          "fr": "ONG d'éducation · Phnom Penh [PLACEHOLDER]",
-          "en": "Education NGO · Phnom Penh [PLACEHOLDER]"
+          "fr": "Ministère de l'Europe et des Affaires étrangères · Paris",
+          "en": "French Ministry for Europe and Foreign Affairs · Paris"
         },
         "text": {
-          "fr": "Coordination d'un programme de français langue étrangère pour 120 élèves, en lien avec les partenaires locaux.",
-          "en": "Coordinated a French-as-a-foreign-language programme for 120 pupils with local partners."
+          "fr": "Simulations de négociation diplomatique ; consultations et échanges avec des experts et des diplomates ; recherche et analyse de documents juridiques et diplomatiques.",
+          "en": "Diplomatic negotiation simulations; consultations and exchanges with experts and diplomats; research and analysis of legal and diplomatic documents."
         }
       },
       {
-        "period": "2024",
+        "period": "2023 – 2025",
         "role": {
-          "fr": "Assistante de recherche",
-          "en": "Research assistant"
+          "fr": "Animatrice en séjours adaptés",
+          "en": "Activity leader, adapted holidays"
         },
         "org": {
-          "fr": "Centre de recherche sur l'Asie · Paris [PLACEHOLDER]",
-          "en": "Asia research centre · Paris [PLACEHOLDER]"
+          "fr": "Loisirs Culture Vacances",
+          "en": "Loisirs Culture Vacances"
         },
         "text": {
-          "fr": "Revue de littérature sur l'architecture régionale de l'ASEAN, constitution d'une base de données de traités.",
-          "en": "Literature review on ASEAN's regional architecture; built a treaty database."
+          "fr": "Encadrement de séjours pour un public en situation de handicap : coordination d'équipe, organisation des déplacements, gestion des imprévus.",
+          "en": "Leading holidays for people with disabilities: team coordination, trip planning, handling the unexpected."
+        }
+      },
+      {
+        "period": "2023 – 2024",
+        "role": {
+          "fr": "Emploi étudiant, garde d'enfants",
+          "en": "Student job, childcare"
+        },
+        "org": {
+          "fr": "Kinougarde · Tours",
+          "en": "Kinougarde · Tours"
+        },
+        "text": {
+          "fr": "",
+          "en": ""
+        }
+      },
+      {
+        "period": "04.2023",
+        "role": {
+          "fr": "Stagiaire en cabinet d'avocat",
+          "en": "Law firm intern"
+        },
+        "org": {
+          "fr": "Cabinet de Maître Zozime, droit privé · Dreux",
+          "en": "Maître Zozime, private law firm · Dreux"
+        },
+        "text": {
+          "fr": "Assistance lors d'audiences devant différentes juridictions ; accueil et consultations des clients et des personnes en garde à vue.",
+          "en": "Assisted at hearings before various courts; received and advised clients and people held in police custody."
         }
       }
     ],
     "education": [
       {
-        "period": "2025 – 2027",
+        "period": "09.2026 – ",
         "role": {
-          "fr": "Master Relations internationales, parcours Asie",
-          "en": "MA International Relations, Asia track"
+          "fr": "Mobilité internationale, Master 2",
+          "en": "International exchange, second year of master's"
         },
         "org": {
-          "fr": "Sciences Po / Inalco [PLACEHOLDER]",
-          "en": "Sciences Po / Inalco [PLACEHOLDER]"
+          "fr": "Université centrale nationale (NCU) · Zhongli, Taïwan",
+          "en": "National Central University (NCU) · Zhongli, Taiwan"
         },
         "text": {
-          "fr": "Mémoire : la diplomatie culturelle française au Vietnam depuis 1993.",
-          "en": "Thesis: French cultural diplomacy in Vietnam since 1993."
+          "fr": "Géopolitique de Taïwan, technologies et relations internationales, économie politique internationale. Mémoire en cours sur le rôle stratégique des technologies taïwanaises face à la Chine.",
+          "en": "Taiwan geopolitics, technology and international relations, international political economy. Ongoing thesis on the strategic role of Taiwanese technologies against China."
         }
       },
       {
-        "period": "2024",
+        "period": "09.2025 – ",
         "role": {
-          "fr": "Semestre d'échange",
-          "en": "Exchange semester"
+          "fr": "Master de droit international",
+          "en": "Master's in International Law"
         },
         "org": {
-          "fr": "Université nationale du Vietnam · Hanoï [PLACEHOLDER]",
-          "en": "Vietnam National University · Hanoi [PLACEHOLDER]"
+          "fr": "Université de Reims Champagne-Ardenne",
+          "en": "University of Reims Champagne-Ardenne"
         },
         "text": {
-          "fr": "Cours de vietnamien intensif, histoire régionale, économie du développement.",
-          "en": "Intensive Vietnamese, regional history, development economics."
+          "fr": "Droit international public et économique, contentieux européen, relations internationales approfondies. Mini-mémoire sur les exercices militaires de la RPC autour de Taïwan.",
+          "en": "Public and economic international law, European litigation, advanced international relations. Research paper on PRC military exercises around Taiwan."
         }
       },
       {
-        "period": "2022 – 2025",
+        "period": "2024 – 2025",
         "role": {
-          "fr": "Licence Science politique",
-          "en": "BA Political Science"
+          "fr": "Mobilité internationale",
+          "en": "International exchange"
         },
         "org": {
-          "fr": "Université [PLACEHOLDER]",
-          "en": "University [PLACEHOLDER]"
+          "fr": "Université de Pécs · Hongrie",
+          "en": "University of Pécs · Hungary"
         },
         "text": {
-          "fr": "Mention bien. Mineure langues orientales.",
-          "en": "With honours. Minor in Asian languages."
+          "fr": "Droit des relations diplomatiques, droits humains dans les relations internationales, droit comparé des droits humains, lutte contre le crime organisé et la traite des êtres humains, jurisprudence de la CEDH.",
+          "en": "Law of diplomatic relations, human rights in international relations, comparative human rights law, combating organised crime and human trafficking, ECHR case law."
+        }
+      },
+      {
+        "period": "2021 – 2025",
+        "role": {
+          "fr": "Licence de droit public, option science politique",
+          "en": "Bachelor's in Public Law, Political Science option"
+        },
+        "org": {
+          "fr": "Université de Tours",
+          "en": "University of Tours"
+        },
+        "text": {
+          "fr": "Introduction aux relations internationales, sociologie politique comparée, histoire sociale et politique, philosophie politique et sociale, sociologie de la mondialisation.",
+          "en": "Introduction to international relations, comparative political sociology, social and political history, political and social philosophy, sociology of globalisation."
+        }
+      }
+    ],
+    "engagements": [
+      {
+        "period": "2025 – 2026",
+        "role": {
+          "fr": "Responsable communication",
+          "en": "Communications manager"
+        },
+        "org": {
+          "fr": "Lysias Reims, concours d'éloquence juridique",
+          "en": "Lysias Reims, legal advocacy society"
+        },
+        "text": {
+          "fr": "Réseaux sociaux et stratégie de communication ; participation à une joute oratoire.",
+          "en": "Social media and communication strategy; took part in a public speaking contest."
+        }
+      },
+      {
+        "period": "2025 – 2026",
+        "role": {
+          "fr": "Membre du réseau des anciens",
+          "en": "Alumni network member"
+        },
+        "org": {
+          "fr": "Académie diplomatique d'été du MEAE",
+          "en": "Summer Diplomatic Academy, French Foreign Ministry"
+        },
+        "text": {
+          "fr": "Conférences, visites d'ambassades, découverte des institutions, dont une visite du Sénat avec un parlementaire.",
+          "en": "Conferences, embassy visits and institutional visits, including a tour of the Senate with a member of parliament."
+        }
+      },
+      {
+        "period": "2023 – 2024",
+        "role": {
+          "fr": "Aide aux devoirs, bénévole",
+          "en": "Volunteer tutor"
+        },
+        "org": {
+          "fr": "Entraide Scolaire Amicale",
+          "en": "Entraide Scolaire Amicale"
+        },
+        "text": {
+          "fr": "",
+          "en": ""
+        }
+      },
+      {
+        "period": "",
+        "role": {
+          "fr": "Ateliers d'échecs chinois",
+          "en": "Chinese chess workshops"
+        },
+        "org": {
+          "fr": "Xiangqi · ouverture culturelle",
+          "en": "Xiangqi · cultural exchange"
+        },
+        "text": {
+          "fr": "",
+          "en": ""
         }
       }
     ]
@@ -496,89 +621,69 @@
     },
     "ref": "CB/DOS/03",
     "intro": {
-      "fr": "Notes d'analyse, articles et projets. Chaque dossier est une pièce du puzzle. [PLACEHOLDER]",
-      "en": "Analysis notes, articles and projects. Each file is one piece of the puzzle. [PLACEHOLDER]"
+      "fr": "Travaux de recherche universitaires, en texte intégral. Le droit international à l'épreuve des rapports de force.",
+      "en": "University research papers, in full. International law tested against power politics."
     },
     "items": [
       {
         "type": {
-          "fr": "Note d'analyse",
-          "en": "Policy brief"
+          "fr": "Mini-mémoire de recherche",
+          "en": "Research paper (in French)"
         },
         "title": {
-          "fr": "Mer de Chine méridionale : la France, puissance d'équilibre ?",
-          "en": "South China Sea: France as a balancing power?"
+          "fr": "La qualification juridique et la légalité des « exercices militaires » de la RPC à l'encontre de Taïwan",
+          "en": "The legal characterisation and legality of the PRC's \"military exercises\" against Taiwan"
         },
         "excerpt": {
-          "fr": "Lecture des positions de Paris depuis la stratégie indo-pacifique de 2018, et des marges de manœuvre réelles.",
-          "en": "Reading Paris's positions since the 2018 Indo-Pacific strategy, and its real room for manoeuvre."
+          "fr": "Blocus effectif, statut indéterminé de l'île, doctrine chinoise des « Trois guerres » et silence diplomatique : une lecture de Justice Mission 2025 au regard de l'UNCLOS et de la Charte des Nations Unies.",
+          "en": "Effective blockade, Taiwan's undetermined status, China's \"Three Warfares\" doctrine and diplomatic silence: a reading of Justice Mission 2025 under UNCLOS and the UN Charter."
         },
         "meta": {
-          "fr": "12 p. · Mars 2026",
-          "en": "12 pp. · March 2026"
+          "fr": "M1 · Reims · 33 p. · 2026",
+          "en": "Master's, year 1 · Reims · 33 pp. · 2026"
         },
-        "tag": "INDO-PACIFIQUE",
-        "url": "#"
+        "tag": "DÉTROIT DE TAÏWAN",
+        "url": "assets/dossiers/beaufils-memoire-exercices-militaires-rpc-taiwan.pdf"
       },
       {
         "type": {
-          "fr": "Article",
-          "en": "Article"
+          "fr": "Essai (en anglais)",
+          "en": "Essay"
         },
         "title": {
-          "fr": "La francophonie au Cambodge, une influence discrète",
-          "en": "Francophonie in Cambodia, a quiet influence"
+          "fr": "Torture et traitements inhumains en prison : États-Unis et Chine comparés",
+          "en": "Torture and inhuman treatment in prison: the United States and China compared"
         },
         "excerpt": {
-          "fr": "Enquête de terrain auprès des enseignants et des anciens boursiers du gouvernement français.",
-          "en": "Field reporting among teachers and former French government scholarship holders."
+          "fr": "Deux régimes signataires de la Convention contre la torture, deux façons d'y manquer : cadre juridique, contextes de violation, et poids des institutions et de l'opinion publique.",
+          "en": "Two states party to the Convention against Torture, two ways of failing it: legal frameworks, contexts of violation, and the weight of institutions and public opinion."
         },
         "meta": {
-          "fr": "Revue étudiante · 2025",
-          "en": "Student journal · 2025"
+          "fr": "Droit comparé des droits humains · Pécs · 11 p. · 2025",
+          "en": "Comparative Human Rights Law · Pécs · 11 pp. · 2025"
         },
-        "tag": "CULTURE",
-        "url": "#"
+        "tag": "DROITS HUMAINS",
+        "url": "assets/dossiers/beaufils-essay-torture-usa-china.pdf"
       },
       {
         "type": {
-          "fr": "Projet",
-          "en": "Project"
+          "fr": "Mémoire de M2",
+          "en": "Master's thesis"
         },
         "title": {
-          "fr": "Cartographie des coopérations universitaires franco-ASEAN",
-          "en": "Mapping Franco-ASEAN university partnerships"
+          "fr": "Le rôle stratégique des technologies taïwanaises dans l'équilibre des puissances face à la Chine",
+          "en": "The strategic role of Taiwanese technologies in the balance of power against China"
         },
         "excerpt": {
-          "fr": "Base de données ouverte et visualisation de 340 accords entre établissements.",
-          "en": "An open database and visualisation of 340 inter-institutional agreements."
+          "fr": "Semi-conducteurs, « bouclier de silicium » et dissuasion : ce que la technologie change au rapport de force dans le détroit. Titre provisoire.",
+          "en": "Semiconductors, the \"silicon shield\" and deterrence: what technology changes in the balance of power across the Strait. Working title."
         },
         "meta": {
-          "fr": "Données · 2025",
-          "en": "Data · 2025"
+          "fr": "NCU, Taïwan · 2027",
+          "en": "NCU, Taiwan · 2027"
         },
-        "tag": "COOPÉRATION",
-        "url": "#"
-      },
-      {
-        "type": {
-          "fr": "Mémoire",
-          "en": "Thesis"
-        },
-        "title": {
-          "fr": "Trente ans de diplomatie culturelle au Vietnam",
-          "en": "Thirty years of cultural diplomacy in Vietnam"
-        },
-        "excerpt": {
-          "fr": "De la réouverture de 1993 aux Instituts français d'aujourd'hui : acteurs, moyens, récits.",
-          "en": "From the 1993 reopening to today's Instituts français: actors, means and narratives."
-        },
-        "meta": {
-          "fr": "En cours · 2027",
-          "en": "In progress · 2027"
-        },
-        "tag": "VIETNAM",
-        "url": "#"
+        "tag": "TECHNOLOGIE",
+        "url": ""
       }
     ]
   },
@@ -589,40 +694,40 @@
     },
     "ref": "CB/TER/04",
     "intro": {
-      "fr": "Séjours, missions et engagements. La carte se lit comme un passeport. [PLACEHOLDER]",
-      "en": "Stays, assignments and commitments. The map reads like a passport. [PLACEHOLDER]"
+      "fr": "Quatre villes, trois pays, un fil conducteur. La carte se lit comme un passeport.",
+      "en": "Four cities, three countries, one common thread. The map reads like a passport."
     },
     "stays": [
       {
-        "place": "hanoi",
-        "dates": "02.2024 – 07.2024",
+        "place": "tours",
+        "dates": "2021 – 2025",
         "what": {
-          "fr": "Semestre d'échange, puis stage à l'Institut français",
-          "en": "Exchange semester, then internship at the Institut français"
+          "fr": "Licence de droit public, option science politique",
+          "en": "Bachelor's in Public Law, Political Science option"
         }
       },
       {
-        "place": "phnompenh",
-        "dates": "07.2025 – 09.2025",
+        "place": "pecs",
+        "dates": "2024 – 2025",
         "what": {
-          "fr": "Mission bénévole, programme de français",
-          "en": "Volunteer assignment, French programme"
+          "fr": "Mobilité internationale : droits humains et relations diplomatiques",
+          "en": "International exchange: human rights and diplomatic law"
         }
       },
       {
-        "place": "bangkok",
-        "dates": "11.2025",
+        "place": "reims",
+        "dates": "2025 – 2026",
         "what": {
-          "fr": "Conférence étudiante sur la sécurité régionale",
-          "en": "Student conference on regional security"
+          "fr": "Master de droit international, Lysias Reims, Mission Handicap",
+          "en": "Master's in International Law, Lysias Reims, Disability Support Office"
         }
       },
       {
-        "place": "singapore",
-        "dates": "04.2026",
+        "place": "zhongli",
+        "dates": "09.2026 –",
         "what": {
-          "fr": "Model ASEAN, délégation française",
-          "en": "Model ASEAN, French delegation"
+          "fr": "Master 2 en mobilité à NCU, cours intensifs de mandarin",
+          "en": "Second-year master's exchange at NCU, intensive Mandarin"
         }
       }
     ]
@@ -647,8 +752,8 @@
         "lang": "fr",
         "level": "native",
         "note": {
-          "fr": "Plume : notes, synthèses, discours",
-          "en": "Writing: briefs, summaries, speeches"
+          "fr": "Rédaction juridique, notes, synthèses",
+          "en": "Legal drafting, briefs, summaries"
         }
       },
       {
@@ -660,47 +765,21 @@
         "lang": "en",
         "level": "C1",
         "note": {
-          "fr": "IELTS 7.5 [PLACEHOLDER]",
-          "en": "IELTS 7.5 [PLACEHOLDER]"
+          "fr": "Courant · cours et essai rédigés en anglais à Pécs",
+          "en": "Fluent · coursework and essay written in English in Pécs"
         }
       },
       {
         "name": {
-          "fr": "Vietnamien",
-          "en": "Vietnamese"
+          "fr": "Mandarin",
+          "en": "Mandarin"
         },
-        "native": "Tiếng Việt",
-        "lang": "vi",
+        "native": "中文",
+        "lang": "zh-Hant",
         "level": "B1",
         "note": {
-          "fr": "Semestre à Hanoï, cours intensifs",
-          "en": "Semester in Hanoi, intensive courses"
-        }
-      },
-      {
-        "name": {
-          "fr": "Espagnol",
-          "en": "Spanish"
-        },
-        "native": "Español",
-        "lang": "es",
-        "level": "B2",
-        "note": {
-          "fr": "DELE B2 [PLACEHOLDER]",
-          "en": "DELE B2 [PLACEHOLDER]"
-        }
-      },
-      {
-        "name": {
-          "fr": "Thaï",
-          "en": "Thai"
-        },
-        "native": "ภาษาไทย",
-        "lang": "th",
-        "level": "A2",
-        "note": {
-          "fr": "En cours d'apprentissage",
-          "en": "Currently learning"
+          "fr": "HSK 3 validé · cours intensifs à Taïwan",
+          "en": "HSK 3 certified · intensive courses in Taiwan"
         }
       }
     ]
@@ -712,27 +791,28 @@
     },
     "ref": "CB/CTC/06",
     "lead": {
-      "fr": "Une mission, un stage, une question ? Écrivez-moi : je réponds sous 48 heures, fuseau horaire permettant.",
-      "en": "An assignment, an internship, a question? Write to me: I reply within 48 hours, time zones permitting."
+      "fr": "Un stage, un projet de recherche, une question ? Écrivez-moi : je réponds sous 48 heures, décalage horaire avec Taïwan permettant.",
+      "en": "An internship, a research project, a question? Write to me: I reply within 48 hours, the Taiwan time difference permitting."
     },
     "emailParts": [
-      "cleo.beaufils",
-      "example",
+      "beaufils.cleo",
+      "gmail",
       "com"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/placeholder"
+        "url": "https://www.linkedin.com/in/cleo-beaufils/"
       }
     ],
     "location": {
-      "fr": "Basée à Paris · mobile dans toute l'Asie du Sud-Est",
-      "en": "Based in Paris · mobile across Southeast Asia"
+      "fr": "Actuellement à Zhongli, Taïwan · mobile en Europe et en Asie-Pacifique",
+      "en": "Currently in Zhongli, Taiwan · mobile across Europe and the Asia-Pacific"
     },
     "telegramHead": {
-      "fr": "Télégramme · Diplo/CB/2026\nDe : Cléo Beaufils, Paris\nÀ : vous · Priorité : haute\nObjet : prise de contact stop",
-      "en": "Telegram · Diplo/CB/2026\nFrom: Cléo Beaufils, Paris\nTo: you · Priority: high\nSubject: getting in touch stop"
+      "fr": "Télégramme · Diplo/CB/2026\nDe : Cléo Beaufils, Zhongli\nÀ : vous · Priorité : haute\nObjet : prise de contact stop",
+      "en": "Telegram · Diplo/CB/2026\nFrom: Cléo Beaufils, Zhongli\nTo: you · Priority: high\nSubject: getting in touch stop"
     }
-  }
+  },
+  "heroOrigin": "paris"
 }
