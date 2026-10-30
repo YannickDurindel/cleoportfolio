@@ -132,9 +132,9 @@ function render() {
   $('[data-footer]').textContent = t(V.footer);
   $('[data-authentic]').textContent = `${t(V.authentic)} :`;
   $$('.bar__opt').forEach((o) => o.classList.toggle('is-on', o.dataset.l === lang));
-  const sw = $('[data-switch]');
-  sw.textContent = `⇄ ${t(V.switchStyle)}`;
-  sw.href = `../?lang=${lang}`;
+  $('[data-styles-label]').textContent = `⇄ ${t(C.ui.styles)}`;
+  const styleBase = { depeche: '../', convention: './', meridien: '../meridien/' };
+  $$('[data-style-link]').forEach((a) => { const k = a.dataset.styleLink; a.textContent = t(C.ui.styleNames[k]); a.href = `${styleBase[k]}?lang=${lang}`; });
 
   emailWiring(u, d, tld);
   spy();
@@ -166,13 +166,15 @@ function spy() {
 
 async function boot() {
   try {
-    C = await (await fetch('../content.json?v=20261030f')).json();
+    C = await (await fetch('../content.json?v=20261030g')).json();
   } catch (e) {
     console.error('content.json could not be loaded', e);
     return;
   }
   lang = pickLang();
   render();
+  // close the styles menu on an outside click
+  document.addEventListener('click', (e) => { $$('details.styles[open]').forEach((d) => { if (!d.contains(e.target)) d.open = false; }); });
   $('[data-lang]').addEventListener('click', () => {
     lang = lang === 'fr' ? 'en' : 'fr';
     try { localStorage.setItem('cb-lang', lang); } catch { /* ignore */ }

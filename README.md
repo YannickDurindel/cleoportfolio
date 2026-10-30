@@ -21,8 +21,10 @@ tools/                pages et script de régénération de og.jpg, des favicons
 ## Deux designs
 
 - `/` : « la dépêche diplomatique » (`index.html`, `assets/`).
-- `/convention/` : le profil rédigé comme un traité (`convention/`). Ses textes propres sont dans le bloc `convention` de `content.json` ; tout le reste (parcours, dossiers, langues…) est partagé.
-- Un bouton dans la barre du haut de chaque design mène à l'autre, en gardant la langue.
+- `/convention/` : le profil rédigé comme un traité (`convention/`). Ses textes propres sont dans le bloc `convention` de `content.json`.
+- `/meridien/` : la page ne défile pas, le défilement fait tourner un globe en points de Tours à Zhongli, change la palette et anime la typographie (`meridien/`). Textes propres dans le bloc `meridien` ; les chapitres de lieux y renvoient aux listes de `parcours` par `[liste, index]`. Le globe vient de `tools/build-globe-dots.py` (Natural Earth, domaine public).
+- Tout le reste (parcours, dossiers, langues…) est partagé entre les trois designs.
+- Le menu « Styles » en haut de chaque design mène aux deux autres, en gardant la langue.
 - Après une modification de `content.json`, `main.js` ou du CSS, augmenter le `?v=` dans `index.html`, `assets/js/main.js` et `convention/` pour que les navigateurs rechargent.
 
 ## Remplacer le contenu

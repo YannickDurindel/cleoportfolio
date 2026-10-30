@@ -509,7 +509,8 @@ function applyStatic() {
   tog.setAttribute('lang', lang === 'fr' ? 'en' : 'fr');
   $$('.lang__opt', tog).forEach((o) => o.classList.toggle('is-on', o.dataset.l === lang));
   // name lines in the hero (kept in HTML for first paint, refreshed from content)
-  $('[data-switch]').href = `convention/?lang=${lang}`;
+  const styleBase = { depeche: './', convention: 'convention/', meridien: 'meridien/' };
+  $$('[data-style-link]').forEach((a) => { const k = a.dataset.styleLink; a.textContent = t(C.ui.styleNames[k]); a.href = `${styleBase[k]}?lang=${lang}`; });
   const lines = $$('.hero__name .line__in');
   lines[0].textContent = C.meta.firstName;
   lines[1].textContent = C.meta.lastName;
@@ -603,7 +604,7 @@ function setupCursor() {
 async function boot() {
   if (!reduceMotion.matches) document.documentElement.classList.add('motion');
   try {
-    C = await (await fetch('content.json?v=20261030f')).json();
+    C = await (await fetch('content.json?v=20261030g')).json();
   } catch (e) {
     console.error('content.json could not be loaded', e);
     return;
@@ -614,6 +615,8 @@ async function boot() {
   setupScroll();
   setupCursor();
 
+  // close the styles menu on an outside click
+  document.addEventListener('click', (e) => { $$('details.styles[open]').forEach((d) => { if (!d.contains(e.target)) d.open = false; }); });
   $('[data-lang-toggle]').addEventListener('click', () => {
     lang = lang === 'fr' ? 'en' : 'fr';
     try { localStorage.setItem('cb-lang', lang); } catch { /* ignore */ }

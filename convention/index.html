@@ -19,15 +19,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..600&family=Pinyon+Script&display=swap">
-  <link rel="stylesheet" href="convention.css?v=20261030f">
-  <script type="module" src="convention.js?v=20261030f"></script>
+  <link rel="stylesheet" href="convention.css?v=20261030g">
+  <script type="module" src="convention.js?v=20261030g"></script>
 </head>
 <body>
   <a class="skip" href="#texte">Aller au texte</a>
 
   <header class="bar">
     <a class="bar__ref" href="#top" data-ref></a>
-    <a class="bar__switch" href="../" data-switch></a>
+    <details class="styles" data-styles>
+      <summary data-styles-label>Styles</summary>
+      <ul>
+        <li><a data-style-link="depeche" href="../"></a></li>
+        <li><a data-style-link="convention" href="./" aria-current="page"></a></li>
+        <li><a data-style-link="meridien" href="../meridien/"></a></li>
+      </ul>
+    </details>
     <button class="bar__lang" type="button" data-lang>
       <span data-authentic></span>
       <span class="bar__opt" data-l="fr">FR</span><span aria-hidden="true">·</span><span class="bar__opt" data-l="en">EN</span>

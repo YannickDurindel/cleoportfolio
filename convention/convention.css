@@ -50,12 +50,22 @@ img { display: block; max-width: 100%; height: auto; }
   border-bottom: 1px solid var(--rule); font-size: 1rem; color: var(--ink-2);
 }
 .bar__ref { text-decoration: none; margin-right: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.bar__switch {
-  text-decoration: none; white-space: nowrap; color: var(--blue);
+.styles { position: relative; }
+.styles summary {
+  list-style: none; cursor: pointer; white-space: nowrap; color: var(--blue);
   border: 1px solid currentColor; border-radius: 2rem; padding: .2rem .9rem; min-height: 44px;
   display: inline-flex; align-items: center; transition: background .25s, color .25s;
 }
-.bar__switch:hover { background: var(--blue); color: var(--paper); }
+.styles summary::-webkit-details-marker { display: none; }
+.styles summary:hover, .styles[open] summary { background: var(--blue); color: var(--paper); }
+.styles ul {
+  position: absolute; right: 0; top: calc(100% + .4rem); min-width: 10rem; margin: 0; padding: .3rem; list-style: none;
+  background: var(--paper); border: 1px solid var(--rule); box-shadow: 0 16px 36px -16px rgba(22, 22, 26, .35);
+  font-variant-caps: normal; letter-spacing: 0;
+}
+.styles a { display: block; padding: .45rem .8rem; text-decoration: none; font-size: 1.1rem; color: var(--ink-2); }
+.styles a:hover { background: var(--paper-2); color: var(--ink); }
+.styles a[aria-current] { color: var(--blue); font-style: italic; }
 .bar__lang {
   font: inherit; color: inherit; background: none; border: 0; cursor: pointer;
   display: inline-flex; gap: .35rem; align-items: center; min-height: 44px; padding: 0;

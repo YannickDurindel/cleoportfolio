@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Méridien · Cléo Beaufils</title>
+  <meta name="description" content="Cléo Beaufils, droit international et Asie-Pacifique : un portfolio qui fait tourner le monde, de Tours à Zhongli.">
+  <meta name="theme-color" content="#1b120e">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://yannickdurindel.github.io/cleoportfolio/meridien/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Cléo Beaufils · Méridien">
+  <meta property="og:description" content="Droit international et Asie-Pacifique. De Tours à Zhongli, un portfolio qui fait tourner le monde.">
+  <meta property="og:url" content="https://yannickdurindel.github.io/cleoportfolio/meridien/">
+  <meta property="og:image" content="https://yannickdurindel.github.io/cleoportfolio/assets/img/og.jpg">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300..600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="meridien.css?v=20261030g">
+  <script type="module" src="meridien.js?v=20261030g"></script>
+</head>
+<body>
+  <a class="skip" href="#c-1">Aller au contenu</a>
+
+  <!-- fixed stage: everything visible lives here; the page itself only provides scroll distance -->
+  <div class="stage" aria-hidden="true">
+    <canvas class="globe" data-globe></canvas>
+    <div class="grain"></div>
+  </div>
+
+  <header class="hud hud--top">
+    <a class="mark" href="#c-0"><span>C<i>B</i></span><em>Méridien</em></a>
+    <div class="hud__right">
+      <details class="styles" data-styles>
+        <summary data-styles-label>Styles</summary>
+        <ul>
+          <li><a data-style-link="depeche" href="../"></a></li>
+          <li><a data-style-link="convention" href="../convention/"></a></li>
+          <li><a data-style-link="meridien" href="./" aria-current="page"></a></li>
+        </ul>
+      </details>
+      <button class="lng" type="button" data-lang><span data-l="fr">FR</span><span data-l="en">EN</span></button>
+    </div>
+  </header>
+
+  <nav class="rail" aria-label="Chapitres" data-rail></nav>
+
+  <div class="hud hud--bottom" aria-hidden="true">
+    <p class="readout" data-readout></p>
+    <p class="counter"><span data-count>01</span><span class="counter__of">/ 09</span><span class="counter__name" data-count-name></span></p>
+  </div>
+
+  <main data-chapters></main>
+
+  <noscript><p class="noscript">Ce design a besoin de JavaScript. <a href="../">Version dépêche</a> · <a href="../convention/">version traité</a>.</p></noscript>
+</body>
+</html>

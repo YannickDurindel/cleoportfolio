@@ -27,7 +27,7 @@ jobs:
       - name: Assemble site
         run: |
           mkdir -p _site
-          cp -r index.html content.json favicon.svg site.webmanifest robots.txt .nojekyll assets convention _site/
+          cp -r index.html content.json favicon.svg site.webmanifest robots.txt .nojekyll assets convention meridien _site/
           [ -f CNAME ] && cp CNAME _site/ || true
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
