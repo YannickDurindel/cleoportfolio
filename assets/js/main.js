@@ -509,6 +509,7 @@ function applyStatic() {
   tog.setAttribute('lang', lang === 'fr' ? 'en' : 'fr');
   $$('.lang__opt', tog).forEach((o) => o.classList.toggle('is-on', o.dataset.l === lang));
   // name lines in the hero (kept in HTML for first paint, refreshed from content)
+  $('[data-switch]').href = `convention/?lang=${lang}`;
   const lines = $$('.hero__name .line__in');
   lines[0].textContent = C.meta.firstName;
   lines[1].textContent = C.meta.lastName;
@@ -602,7 +603,7 @@ function setupCursor() {
 async function boot() {
   if (!reduceMotion.matches) document.documentElement.classList.add('motion');
   try {
-    C = await (await fetch('content.json?v=20261030d')).json();
+    C = await (await fetch('content.json?v=20261030f')).json();
   } catch (e) {
     console.error('content.json could not be loaded', e);
     return;

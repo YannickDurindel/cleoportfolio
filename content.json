@@ -181,6 +181,10 @@
     "fieldScale": {
       "fr": "Fig. 2 · Deux échelles différentes",
       "en": "Fig. 2 · Two different scales"
+    },
+    "switchStyle": {
+      "fr": "Style traité",
+      "en": "Treaty style"
     }
   },
   "hero": {
@@ -379,7 +383,7 @@
         "en": "I am a master's student in International Law at the University of Reims Champagne-Ardenne, spending my second year on exchange at National Central University (NCU) in Zhongli, Taiwan. My path combines public law, political science and international relations, from my bachelor's in Tours to a year of human rights law in Pécs, Hungary."
       },
       {
-        "fr": "Mes recherches portent sur la légalité des « exercices militaires » de la République populaire de Chine autour de Taïwan, sur la prohibition de la torture comparée entre les États-Unis et la Chine, et aujourd'hui sur le rôle stratégique des technologies taïwanaises dans l'équilibre des puissances. Passée par l'Académie diplomatique d'été du ministère de l'Europe et des Affaires étrangères, je cherche un stage en institut de recherche ou en organisation internationale à partir de février 2027.",
+        "fr": "Mes recherches portent sur la légalité des « exercices militaires » de la République populaire de Chine autour de Taïwan, sur la prohibition de la torture comparée entre les États-Unis et la Chine, et aujourd'hui sur le rôle stratégique des technologies taïwanaises dans l'équilibre des puissances. Passée par l'Académie diplomatique d'été du ministère de l'Europe et des Affaires étrangères, je cherche un stage en institut de recherche ou en organisation internationale à partir de février 2027.",
         "en": "My research covers the legality of the People's Republic of China's \"military exercises\" around Taiwan, a comparison of the prohibition of torture in the United States and China, and now the strategic role of Taiwanese technologies in the balance of power. An alumna of the French Foreign Ministry's Summer Diplomatic Academy, I am looking for an internship in a research institute or international organisation from February 2027."
       }
     ],
@@ -416,7 +420,7 @@
       }
     ],
     "quote": {
-      "fr": "« Le droit devient inutile s'il ne protège plus l'être humain mais sert l'intérêt des puissances. »",
+      "fr": "« Le droit devient inutile s'il ne protège plus l'être humain mais sert l'intérêt des puissances. »",
       "en": "“Law becomes useless when it no longer protects human beings but serves the interests of the powerful.”"
     },
     "quoteSource": {
@@ -649,11 +653,11 @@
           "en": "Research paper (in French)"
         },
         "title": {
-          "fr": "La qualification juridique et la légalité des « exercices militaires » de la RPC à l'encontre de Taïwan",
+          "fr": "La qualification juridique et la légalité des « exercices militaires » de la RPC à l'encontre de Taïwan",
           "en": "The legal characterisation and legality of the PRC's \"military exercises\" against Taiwan"
         },
         "excerpt": {
-          "fr": "Blocus effectif, statut indéterminé de l'île, doctrine chinoise des « Trois guerres » et silence diplomatique : une lecture de Justice Mission 2025 au regard de l'UNCLOS et de la Charte des Nations Unies.",
+          "fr": "Blocus effectif, statut indéterminé de l'île, doctrine chinoise des « Trois guerres » et silence diplomatique : une lecture de Justice Mission 2025 au regard de l'UNCLOS et de la Charte des Nations Unies.",
           "en": "Effective blockade, Taiwan's undetermined status, China's \"Three Warfares\" doctrine and diplomatic silence: a reading of Justice Mission 2025 under UNCLOS and the UN Charter."
         },
         "meta": {
@@ -693,7 +697,7 @@
           "en": "The strategic role of Taiwanese technologies in the balance of power against China"
         },
         "excerpt": {
-          "fr": "Semi-conducteurs, « bouclier de silicium » et dissuasion : ce que la technologie change au rapport de force dans le détroit. Titre provisoire.",
+          "fr": "Semi-conducteurs, « bouclier de silicium » et dissuasion : ce que la technologie change au rapport de force dans le détroit. Titre provisoire.",
           "en": "Semiconductors, the \"silicon shield\" and deterrence: what technology changes in the balance of power across the Strait. Working title."
         },
         "meta": {
@@ -832,5 +836,198 @@
       "en": "Telegram · Diplo/CB/2026\nFrom: Cléo Beaufils, Zhongli\nTo: you · Priority: high\nSubject: getting in touch stop"
     }
   },
-  "heroOrigin": "paris"
+  "heroOrigin": "paris",
+  "convention": {
+    "_note": "Textes propres au second design (convention/). Le reste vient des sections ci-dessus.",
+    "switchStyle": {
+      "fr": "Style dépêche",
+      "en": "Dispatch style"
+    },
+    "docRef": {
+      "fr": "Recueil des profils · Vol. 1 · N° 2026-CB",
+      "en": "Profile Series · Vol. 1 · No. 2026-CB"
+    },
+    "kind": {
+      "fr": "Convention",
+      "en": "Convention"
+    },
+    "subtitle": {
+      "fr": "relative au parcours et à la candidature de",
+      "en": "on the background and application of"
+    },
+    "authentic": {
+      "fr": "Texte faisant foi",
+      "en": "Authentic text"
+    },
+    "contents": {
+      "fr": "Sommaire",
+      "en": "Contents"
+    },
+    "preambleTitle": {
+      "fr": "Préambule",
+      "en": "Preamble"
+    },
+    "parties": {
+      "fr": "La soussignée et ses futurs interlocuteurs, ci-après « les Parties »,",
+      "en": "The undersigned and her future counterparts, hereinafter “the Parties”,"
+    },
+    "preamble": [
+      {
+        "fr": "Considérant que le droit international ne vaut que s'il protège, et qu'il doit être étudié au plus près des rapports de force qu'il prétend encadrer ;",
+        "en": "Considering that international law is only worth what it protects, and must be studied as close as possible to the power relations it claims to govern;"
+      },
+      {
+        "fr": "Rappelant le parcours de la soussignée en droit public, en science politique et en relations internationales, de Tours à Pécs, de Reims à Zhongli ;",
+        "en": "Recalling the undersigned's path through public law, political science and international relations, from Tours to Pécs, from Reims to Zhongli;"
+      },
+      {
+        "fr": "Ayant à l'esprit ses travaux sur le détroit de Taïwan, sur la prohibition de la torture et sur le rôle stratégique des technologies taïwanaises ;",
+        "en": "Bearing in mind her work on the Taiwan Strait, on the prohibition of torture and on the strategic role of Taiwanese technologies;"
+      },
+      {
+        "fr": "Convaincues qu'un double profil, juridique et géopolitique, peut servir utilement la diplomatie française et la recherche en Asie-Pacifique ;",
+        "en": "Convinced that a dual background, legal and geopolitical, can usefully serve French diplomacy and research on the Asia-Pacific;"
+      }
+    ],
+    "agreed": {
+      "fr": "Sont convenues de ce qui suit :",
+      "en": "Have agreed as follows:"
+    },
+    "titles": {
+      "identite": {
+        "fr": "Des Parties",
+        "en": "The Parties"
+      },
+      "formation": {
+        "fr": "De la formation et de l'expérience",
+        "en": "Education and experience"
+      },
+      "travaux": {
+        "fr": "Des travaux de recherche",
+        "en": "Research"
+      },
+      "terrain": {
+        "fr": "Du champ d'application territorial",
+        "en": "Territorial scope"
+      },
+      "langues": {
+        "fr": "Du régime linguistique",
+        "en": "Language regime"
+      },
+      "final": {
+        "fr": "Dispositions finales",
+        "en": "Final provisions"
+      }
+    },
+    "articles": {
+      "identite": {
+        "fr": "Identification",
+        "en": "Identification"
+      },
+      "domaines": {
+        "fr": "Domaines de compétence",
+        "en": "Fields of competence"
+      },
+      "formation": {
+        "fr": "Formation",
+        "en": "Education"
+      },
+      "experience": {
+        "fr": "Expérience professionnelle",
+        "en": "Professional experience"
+      },
+      "engagements": {
+        "fr": "Engagements",
+        "en": "Commitments"
+      },
+      "travaux": {
+        "fr": "Travaux déposés",
+        "en": "Papers deposited"
+      },
+      "terrain": {
+        "fr": "Lieux de séjour",
+        "en": "Places of residence"
+      },
+      "langues": {
+        "fr": "Langues de travail",
+        "en": "Working languages"
+      },
+      "vigueur": {
+        "fr": "Entrée en vigueur",
+        "en": "Entry into force"
+      },
+      "contact": {
+        "fr": "Communications",
+        "en": "Communications"
+      },
+      "depositaire": {
+        "fr": "Dépositaire",
+        "en": "Depositary"
+      }
+    },
+    "identite": {
+      "fr": "La présente Convention concerne Cléo Beaufils, étudiante en Master de droit international à l'Université de Reims Champagne-Ardenne, actuellement en mobilité à l'Université centrale nationale de Zhongli (Taïwan).",
+      "en": "This Convention concerns Cléo Beaufils, master's student in International Law at the University of Reims Champagne-Ardenne, currently on exchange at National Central University in Zhongli (Taiwan)."
+    },
+    "photoCaption": {
+      "fr": "Annexe photographique",
+      "en": "Photographic annex"
+    },
+    "readPdf": {
+      "fr": "Consulter le texte intégral (PDF)",
+      "en": "Read the full text (PDF)"
+    },
+    "pending": {
+      "fr": "En cours de rédaction",
+      "en": "Being drafted"
+    },
+    "tablePlace": {
+      "fr": "Lieu",
+      "en": "Place"
+    },
+    "tablePeriod": {
+      "fr": "Période",
+      "en": "Period"
+    },
+    "tableObject": {
+      "fr": "Objet",
+      "en": "Purpose"
+    },
+    "level": {
+      "fr": "Niveau",
+      "en": "Level"
+    },
+    "vigueur": {
+      "fr": "La présente Convention entre en vigueur en février 2027, date à compter de laquelle la soussignée est disponible pour un stage en institut de recherche ou en organisation internationale.",
+      "en": "This Convention enters into force in February 2027, from which date the undersigned is available for an internship in a research institute or international organisation."
+    },
+    "contact": {
+      "fr": "Toute communication relative à la présente Convention est adressée à la soussignée par courrier électronique ou par l'intermédiaire de LinkedIn. Une réponse est donnée sous quarante-huit heures, décalage horaire permettant.",
+      "en": "Any communication relating to this Convention shall be addressed to the undersigned by email or via LinkedIn. A reply shall be given within forty-eight hours, time zones permitting."
+    },
+    "depositaire": {
+      "fr": "Le curriculum vitae de la soussignée est déposé auprès du présent site, qui en assure la diffusion.",
+      "en": "The undersigned's curriculum vitae is deposited with this website, which ensures its circulation."
+    },
+    "inWitness": {
+      "fr": "En foi de quoi, la soussignée a signé la présente Convention.",
+      "en": "In witness whereof, the undersigned has signed this Convention."
+    },
+    "doneAt": {
+      "fr": "Fait à Zhongli, le",
+      "en": "Done at Zhongli, on"
+    },
+    "signatory": {
+      "fr": "Pour la Partie candidate",
+      "en": "For the applicant Party"
+    },
+    "footer": {
+      "fr": "Site personnel, sans lien avec une administration ni une organisation internationale. Aucun traceur, aucun cookie.",
+      "en": "Personal website, not affiliated with any government or international organisation. No trackers, no cookies."
+    },
+    "identite2": {
+      "fr": "Ses travaux portent sur la légalité des « exercices militaires » de la République populaire de Chine autour de Taïwan, sur la prohibition de la torture comparée entre les États-Unis et la Chine, et sur le rôle stratégique des technologies taïwanaises dans l'équilibre des puissances. Ancienne participante de l'Académie diplomatique d'été du ministère de l'Europe et des Affaires étrangères, elle recherche un stage en institut de recherche ou en organisation internationale.",
+      "en": "Her work covers the legality of the People's Republic of China's “military exercises” around Taiwan, a comparison of the prohibition of torture in the United States and China, and the strategic role of Taiwanese technologies in the balance of power. An alumna of the French Foreign Ministry's Summer Diplomatic Academy, she is seeking an internship in a research institute or international organisation."
+    }
+  }
 }

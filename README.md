@@ -18,6 +18,13 @@ assets/dossiers/      travaux de recherche en PDF (mini-mémoire, essai)
 tools/                pages et script de régénération de og.jpg, des favicons et des CV d'exemple
 ```
 
+## Deux designs
+
+- `/` : « la dépêche diplomatique » (`index.html`, `assets/`).
+- `/convention/` : le profil rédigé comme un traité (`convention/`). Ses textes propres sont dans le bloc `convention` de `content.json` ; tout le reste (parcours, dossiers, langues…) est partagé.
+- Un bouton dans la barre du haut de chaque design mène à l'autre, en gardant la langue.
+- Après une modification de `content.json`, `main.js` ou du CSS, augmenter le `?v=` dans `index.html`, `assets/js/main.js` et `convention/` pour que les navigateurs rechargent.
+
 ## Remplacer le contenu
 
 1. **Textes** : modifier `content.json`. Chaque champ traduisible a la forme `{ "fr": "…", "en": "…" }`.
