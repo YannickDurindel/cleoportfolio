@@ -570,7 +570,7 @@ function setupCursor() {
 async function boot() {
   if (!reduceMotion.matches) document.documentElement.classList.add('motion');
   try {
-    C = await (await fetch('content.json')).json();
+    C = await (await fetch('content.json?v=20261030b')).json();
   } catch (e) {
     console.error('content.json could not be loaded', e);
     return;
