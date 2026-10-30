@@ -335,10 +335,24 @@ ol, ul { padding: 0; list-style: none; }
 
 /* field map (paper) */
 .map--field { background: var(--paper); border: 1px solid var(--rule); padding: .6rem; }
-.map--field .map__dots { stroke: rgba(14, 26, 43, .3); stroke-width: 2.2; }
+.map--field .map__dots { stroke: rgba(14, 26, 43, .42); stroke-width: 2.6; }
 .map--field .map__grat { stroke: rgba(14, 26, 43, .08); }
 .map--field .map__grat--eq { stroke: rgba(176, 40, 31, .4); }
 .map--field .map__gratlabel { fill: var(--brass-ink); font-size: 7px; }
+.field__panel { fill: none; stroke: rgba(14, 26, 43, .28); stroke-width: .8; }
+.field__tagbg { fill: var(--paper); stroke: rgba(14, 26, 43, .28); stroke-width: .8; }
+.field__tag { fill: var(--brass-ink); font: 500 8px var(--mono); letter-spacing: .14em; }
+.field__sea { fill: rgba(14, 26, 43, .45); font: italic 400 11px var(--serif); letter-spacing: .04em; }
+.field__legend text { fill: var(--ink-2); font: 400 13px var(--serif); }
+.field__legend .field__km { fill: var(--red); font: 500 10px var(--mono); letter-spacing: .12em; }
+.field__legend .field__note { fill: var(--ink-3); font: 500 7.5px var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+.map--field .pin__label, .field__sea { paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
+@media (max-width: 47.99rem) {
+  .map--field .pin__label { font-size: 19px; }
+  .field__tag, .field__note { font-size: 12px; }
+  .field__legend text { font-size: 20px; } .field__legend .field__km { font-size: 15px; }
+}
+.map--field .map__arc--far { stroke: var(--red); stroke-dasharray: 4 4; opacity: .7; }
 .pin { cursor: pointer; }
 .pin__dot { fill: var(--red); transition: r .3s var(--ease); }
 .pin__halo { fill: rgba(176, 40, 31, .14); stroke: rgba(176, 40, 31, .5); stroke-width: .6; transform-box: fill-box; transform-origin: center; transition: transform .45s var(--ease); }
@@ -483,7 +497,8 @@ ol, ul { padding: 0; list-style: none; }
 .stay__btn:hover .stay__stamp, .stay__btn:focus-visible .stay__stamp, .stay.is-on .stay__stamp { transform: rotate(0deg) scale(1.04) !important; }
 .stay__what { font-size: .86rem; color: var(--ink-2); line-height: 1.4; }
 @media (min-width: 62rem) {
-  .stays { grid-template-columns: repeat(4, 1fr); gap: 3rem 2rem; }
+  .terrain { grid-template-columns: 1.35fr 1fr; align-items: start; gap: 3rem; }
+  .stays { grid-template-columns: 1fr 1fr; }
 }
 
 /* stamps (shared) */

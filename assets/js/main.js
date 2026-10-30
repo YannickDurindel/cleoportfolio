@@ -1,6 +1,6 @@
 // Cléo Beaufils · portfolio. Vanilla JS, no tracker, no dependency.
 // All copy comes from content.json; this file only renders it.
-import { MAP_DOTS } from './map-dots.js';
+import { MAP_DOTS, FIELD_DOTS } from './map-dots.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -186,24 +186,56 @@ function stamp({ top = '', center = '', bottom = '', shape = 'circle', color = '
     </g></svg>`;
 }
 
+// Two zoomed panels (same bounds as tools/build-field-dots.py), each equirectangular around its mid-latitude
+const FIELD_PANELS = {
+  eu: { lon: [-5, 21], lat: [42, 52], x: 0, y: 0, w: 600 },
+  tw: { lon: [117.2, 123.8], lat: [21.6, 26.6], x: 320, y: 372, w: 280 },
+};
+for (const p of Object.values(FIELD_PANELS)) {
+  p.k = p.w / ((p.lon[1] - p.lon[0]) * Math.cos((p.lat[0] + p.lat[1]) / 2 * Math.PI / 180));
+  p.h = (p.lat[1] - p.lat[0]) * p.k;
+}
+const fieldPanel = (pl) => Object.keys(FIELD_PANELS).find((k) => { const p = FIELD_PANELS[k]; return pl.lon >= p.lon[0] && pl.lon <= p.lon[1] && pl.lat >= p.lat[0] && pl.lat <= p.lat[1]; });
+const fieldProj = (k, lon, lat) => { const p = FIELD_PANELS[k]; return [p.x + (lon - p.lon[0]) / (p.lon[1] - p.lon[0]) * p.w, p.y + (p.lat[1] - lat) * p.k]; };
+
 function drawField() {
   const svg = $('[data-field-map]');
   svg.innerHTML = '';
   svg.setAttribute('aria-label', t(C.ui.fieldMap));
-  graticule(svg, { labels: false });
-  el('path', { d: MAP_DOTS, class: 'map__dots', 'aria-hidden': 'true' }, svg);
-  const stays = C.terrain.stays.filter((s) => C.places[s.place]);
-  // itinerary in chronological order
-  const pts = stays.map((s) => proj(C.places[s.place].lon, C.places[s.place].lat));
-  pts.slice(1).forEach((p, i) => el('path', { d: arcPath(pts[i], p, .25), class: 'map__arc', 'aria-hidden': 'true' }, svg));
+  const deco = el('g', { 'aria-hidden': 'true' }, svg);
+  for (const [k, p] of Object.entries(FIELD_PANELS)) {
+    el('rect', { x: p.x, y: p.y, width: p.w, height: p.h, class: 'field__panel' }, deco);
+    el('path', { d: FIELD_DOTS[k], class: 'map__dots' }, deco);
+    const tag = t(C.ui.fieldPanels[k]).toUpperCase();
+    el('rect', { x: p.x + .5, y: p.y + .5, width: 14 + tag.length * 6.6, height: 20, class: 'field__tagbg' }, deco);
+    el('text', { x: p.x + 8, y: p.y + 14, class: 'field__tag' }, deco).textContent = tag;
+  }
+  const [sx, sy] = fieldProj('tw', 119.4, 23.3);
+  el('text', { x: sx, y: sy, 'text-anchor': 'middle', transform: `rotate(-52 ${sx} ${sy})`, class: 'field__sea' }, deco).textContent = t(C.ui.strait);
+
+  const stays = C.terrain.stays.filter((s) => C.places[s.place] && fieldPanel(C.places[s.place]));
+  // itinerary in chronological order; the hop between panels is a long dashed curve
+  const pts = stays.map((s) => { const pl = C.places[s.place]; return fieldProj(fieldPanel(pl), pl.lon, pl.lat); });
+  pts.slice(1).forEach((p, i) => {
+    const far = fieldPanel(C.places[stays[i].place]) !== fieldPanel(C.places[stays[i + 1].place]);
+    if (!far) { el('path', { d: arcPath(pts[i], p, .25), class: 'map__arc', 'aria-hidden': 'true' }, svg); return; }
+    // panel to panel: leave Europe through its bottom edge, enter Taiwan from the west
+    const eu = FIELD_PANELS.eu, tw = FIELD_PANELS.tw, x1 = 150, y1 = eu.y + eu.h, [x2, y2] = p;
+    el('path', { d: `M${x1} ${y1}C${x1} ${y1 + 90} ${tw.x - 120} ${y2} ${x2} ${y2}`, class: 'map__arc map__arc--far', 'aria-hidden': 'true' }, svg);
+    const a = C.places[stays[i].place], b = C.places[stays[i + 1].place];
+    const g = el('g', { class: 'field__legend', 'aria-hidden': 'true' }, svg);
+    el('text', { x: 4, y: tw.y + 140 }, g).textContent = `${t(a.name)} → ${t(b.name)}`;
+    el('text', { x: 4, y: tw.y + 156, class: 'field__km' }, g).textContent = `${nf().format(km(a, b))} km`;
+    el('text', { x: 4, y: tw.y + tw.h - 4, class: 'field__note' }, g).textContent = t(C.ui.fieldScale);
+  });
   stays.forEach((s, i) => {
     const p = C.places[s.place], [x, y] = pts[i];
     const g = el('g', { class: 'pin', 'data-pin': i }, svg);
-    el('circle', { cx: x, cy: y, r: 11, class: 'pin__halo' }, g);
-    el('circle', { cx: x, cy: y, r: 6, class: 'pin__dot' }, g);
-    el('text', { x, y: y + 1.8, 'text-anchor': 'middle', class: 'pin__n' }, g).textContent = String(i + 1).padStart(2, '0');
-    const left = p.side ? p.side === 'end' : x > 500;
-    el('text', { x: x + (left ? -15 : 15), y: y + 3.5, 'text-anchor': left ? 'end' : 'start', class: 'pin__label' }, g).textContent = t(p.label || p.name);
+    el('circle', { cx: x, cy: y, r: 9, class: 'pin__halo' }, g);
+    el('circle', { cx: x, cy: y, r: 5, class: 'pin__dot' }, g);
+    el('text', { x, y: y + 1.6, 'text-anchor': 'middle', class: 'pin__n' }, g).textContent = String(i + 1).padStart(2, '0');
+    const left = p.side === 'end';
+    el('text', { x: x + (left ? -13 : 13), y: y + 3.5, 'text-anchor': left ? 'end' : 'start', class: 'pin__label' }, g).textContent = t(p.name);
   });
 
   const colors = ['var(--red)', 'var(--ink)', 'var(--brass-ink)', 'var(--red)', 'var(--ink)'];
@@ -570,7 +602,7 @@ function setupCursor() {
 async function boot() {
   if (!reduceMotion.matches) document.documentElement.classList.add('motion');
   try {
-    C = await (await fetch('content.json?v=20261030b')).json();
+    C = await (await fetch('content.json?v=20261030d')).json();
   } catch (e) {
     console.error('content.json could not be loaded', e);
     return;

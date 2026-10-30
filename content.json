@@ -163,6 +163,24 @@
     "inProgress": {
       "fr": "En cours",
       "en": "In progress"
+    },
+    "fieldPanels": {
+      "eu": {
+        "fr": "Europe",
+        "en": "Europe"
+      },
+      "tw": {
+        "fr": "Taïwan",
+        "en": "Taiwan"
+      }
+    },
+    "strait": {
+      "fr": "Détroit de Taïwan",
+      "en": "Taiwan Strait"
+    },
+    "fieldScale": {
+      "fr": "Fig. 2 · Deux échelles différentes",
+      "en": "Fig. 2 · Two different scales"
     }
   },
   "hero": {
@@ -278,7 +296,7 @@
       "lat": 24.9537,
       "lon": 121.2257,
       "tz": "Asia/Taipei",
-      "side": "end",
+      "side": "start",
       "label": {
         "fr": "Zhongli · Taïwan",
         "en": "Zhongli · Taiwan"
